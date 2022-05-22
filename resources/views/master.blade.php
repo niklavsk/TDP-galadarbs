@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="lv">
     <head>
         <title>Mans ceļš uz universitāti</title>
@@ -10,10 +11,21 @@
     </head>
     <body>
         <nav class="topnav">
-            
+            <div class="logo-container">
+                <a href="{{ url('/') }}">
+                    <img src="{{ url('/images/logo.png') }}" alt="">
+                </a>
+            </div>
+
+            <div class="language-links-container">
+                <ul class="language-links">
+                    <li class="active">LV</li>
+                    <li>EN</li>
+                </ul>
+            </div>
         </nav>
 
-        <div class="container">
+        <div class="container @yield('color')">
             @yield('content')
         </div>
     </body>

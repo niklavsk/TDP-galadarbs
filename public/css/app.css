@@ -1,1 +1,197 @@
+@import url(https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+body, html {
+  color: #FFFFFF;
+  font-family: "Public Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
+h1 {
+  font-size: 100px;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 110px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 70px;
+  font-style: italic;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h3 {
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h4 {
+  font-size: 40px;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+.prev-icon,
+.next-icon {
+  font-size: 45px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+.topnav .logo-container {
+  margin: auto;
+  padding: 18px 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.topnav .logo-container a img {
+  height: 50px;
+}
+.topnav .language-links-container {
+  position: absolute;
+  right: 100px;
+  top: 24px;
+}
+.topnav .language-links-container ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.topnav .language-links-container ul li {
+  float: left;
+  color: #B3B3B3;
+  padding: 0 18px;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: italic;
+}
+.topnav .language-links-container ul li.active {
+  color: white;
+}
+
+.container .hero-image-container {
+  width: 100%;
+}
+.container .hero-image-container img {
+  width: 100%;
+}
+.container .section-content {
+  padding: 0 50px 0 50px;
+}
+.container .section-content .row {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  width: 100%;
+}
+.container .section-content .row .col-left,
+.container .section-content .row .col-right {
+  width: 50%;
+}
+.container .navigation-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+.container .navigation-button-container a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.container .navigation-button-container a:hover {
+  color: #FFFFFF;
+}
+
+.yellow {
+  background-color: #CEA90D;
+}
+.yellow .section-content {
+  background: linear-gradient(180deg, rgba(206, 169, 13, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+.light-orange {
+  background-color: #D48502;
+}
+.light-orange .section-content {
+  background: linear-gradient(180deg, rgba(212, 133, 2, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+.orange {
+  background-color: #C4451A;
+}
+.orange .section-content {
+  background: linear-gradient(180deg, rgba(196, 69, 26, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+.red {
+  background-color: #B72538;
+}
+.red .section-content {
+  background: linear-gradient(180deg, rgba(183, 37, 56, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+.purple {
+  background-color: #511260;
+}
+.purple .section-content {
+  background: linear-gradient(180deg, rgba(81, 18, 96, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+.blue {
+  background-color: #1F247C;
+}
+.blue .section-content {
+  background: linear-gradient(180deg, rgba(31, 36, 124, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+.dark-blue {
+  background-color: #1D2030;
+}
+.dark-blue .section-content {
+  background: linear-gradient(180deg, rgba(29, 32, 48, 0) 0%, rgb(0, 0, 0) 100%);
+}

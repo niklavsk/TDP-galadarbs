@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+// Variables
+$color-yellow: #CEA90D;
+$color-light-orange: #D48502;
+$color-orange: #C4451A;
+$color-red: #B72538;
+$color-purple: #511260;
+$color-blue: #1F247C;
+$color-dark-blue: #1D2030;
+
 body, html {
     color: #FFFFFF;
     font-family: 'Public Sans', sans-serif;
@@ -59,6 +68,7 @@ h5 {
 h6 {
     font-size: 18px;
     font-weight: bold;
+    line-height: 22px;
     margin: 0;
     padding: 0;
 }
@@ -123,6 +133,114 @@ p {
     }
 }
 
+// Buttons
+.button-white {
+    color: #000000;
+    background-color: #ffffff;
+    font-weight: 900;
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+// Homepage
+
+.accordion-menu {
+    height: 750px;
+    overflow: hidden;
+
+    .menu-item {
+        bottom: 0;
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+
+        .item-contents {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 100px;
+
+            position: relative;
+            top: 90px;
+            left: 90px;
+
+            .col-right {
+                max-width: 450px;
+
+                .button-container {
+                    margin-top: 45px;
+                }
+            }
+        }
+
+        &.item-durvis {
+            background: $color-dark-blue url("/images/menu/durvis.svg") no-repeat 12px 12px;
+            background-origin: content-box;
+            background-size: cover;
+            height: 750px;
+        }
+
+        &.item-krustojums {
+            background: $color-blue url("/images/menu/krustojums.svg") no-repeat 12px 12px;
+            background-origin: content-box;
+            background-size: cover;
+            border-radius: 45px 0 0 0;
+            height: 675px;
+            left: 75px;
+        }
+
+        &.item-galastacija {
+            background: $color-purple url("/images/menu/gala stacija.svg") no-repeat 12px 12px;
+            background-origin: content-box;
+            background-size: cover;
+            border-radius: 45px 0 0 0;
+            height: 600px;
+            left: 150px;
+        }
+
+        &.item-skatlogs {
+            background: $color-red url("/images/menu/skatlogs.svg") no-repeat 12px 12px;
+            background-origin: content-box;
+            background-size: cover;
+            border-radius: 45px 0 0 0;
+            height: 525px;
+            left: 225px;
+        }
+
+        &.item-brauciens {
+            background: $color-orange url("/images/menu/brauciens.svg") no-repeat 12px 12px;
+            background-origin: content-box;
+            background-size: cover;
+            border-radius: 45px 0 0 0;
+            height: 450px;
+            left: 300px;
+        }
+
+        &.item-gaidisana {
+            background: $color-light-orange url("/images/menu/gaidisana.svg") no-repeat 12px 12px;
+            background-origin: content-box;
+            background-size: cover;
+            border-radius: 45px 0 0 0;
+            height: 375px;
+            left: 375px;
+        }
+
+        &.item-pasteiga {
+            background: $color-yellow url("/images/menu/pasteiga.svg") no-repeat 12px 12px;
+            background-origin: content-box;
+            background-size: cover;
+            border-radius: 45px 0 0 0;
+            height: 300px;
+            left: 450px;
+        }
+    }
+}
+
+// Section page
+
 .container {
     .hero-image-container {
         width: 100%;
@@ -165,7 +283,7 @@ p {
 }
 
 .yellow {
-    background-color: #CEA90D;
+    background-color: $color-yellow;
 
     .section-content {
         background: linear-gradient(180deg, rgba(206,169,13,0) 0%, rgba(0,0,0,1) 100%);
@@ -173,7 +291,7 @@ p {
 }
 
 .light-orange {
-    background-color: #D48502;
+    background-color: $color-light-orange;
 
     .section-content {
         background: linear-gradient(180deg, rgba(212,133,2,0) 0%, rgba(0,0,0,1) 100%);
@@ -181,7 +299,7 @@ p {
 }
 
 .orange {
-    background-color: #C4451A;
+    background-color: $color-orange;
 
     .section-content {
         background: linear-gradient(180deg, rgba(196,69,26,0) 0%, rgba(0,0,0,1) 100%);
@@ -189,7 +307,7 @@ p {
 }
 
 .red {
-    background-color: #B72538;
+    background-color: $color-red;
 
     .section-content {
         background: linear-gradient(180deg, rgba(183,37,56,0) 0%, rgba(0,0,0,1) 100%);
@@ -197,7 +315,7 @@ p {
 }
 
 .purple {
-    background-color: #511260;
+    background-color: $color-purple;
 
     .section-content {
         background: linear-gradient(180deg, rgba(81,18,96,0) 0%, rgba(0,0,0,1) 100%);
@@ -205,7 +323,7 @@ p {
 }
 
 .blue {
-    background-color: #1F247C;
+    background-color: $color-blue;
 
     .section-content {
         background: linear-gradient(180deg, rgba(31,36,124,0) 0%, rgba(0,0,0,1) 100%);
@@ -213,7 +331,7 @@ p {
 }
 
 .dark-blue {
-    background-color: #1D2030;
+    background-color: $color-dark-blue;
 
     .section-content {
         background: linear-gradient(180deg, rgba(29,32,48,0) 0%, rgba(0,0,0,1) 100%);

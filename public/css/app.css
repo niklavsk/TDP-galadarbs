@@ -58,6 +58,7 @@ h5 {
 h6 {
   font-size: 18px;
   font-weight: bold;
+  line-height: 22px;
   margin: 0;
   padding: 0;
 }
@@ -114,6 +115,97 @@ p {
 }
 .topnav .language-links-container ul li.active {
   color: white;
+}
+
+.button-white {
+  color: #000000;
+  background-color: #ffffff;
+  font-weight: 900;
+  font-size: 14px;
+  padding: 15px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.accordion-menu {
+  height: 750px;
+  overflow: hidden;
+}
+.accordion-menu .menu-item {
+  bottom: 0;
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+}
+.accordion-menu .menu-item .item-contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 100px;
+  position: relative;
+  top: 90px;
+  left: 90px;
+}
+.accordion-menu .menu-item .item-contents .col-right {
+  max-width: 450px;
+}
+.accordion-menu .menu-item .item-contents .col-right .button-container {
+  margin-top: 45px;
+}
+.accordion-menu .menu-item.item-durvis {
+  background: #1D2030 url("/images/menu/durvis.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
+  height: 750px;
+}
+.accordion-menu .menu-item.item-krustojums {
+  background: #1F247C url("/images/menu/krustojums.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
+  border-radius: 45px 0 0 0;
+  height: 675px;
+  left: 75px;
+}
+.accordion-menu .menu-item.item-galastacija {
+  background: #511260 url("/images/menu/gala stacija.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
+  border-radius: 45px 0 0 0;
+  height: 600px;
+  left: 150px;
+}
+.accordion-menu .menu-item.item-skatlogs {
+  background: #B72538 url("/images/menu/skatlogs.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
+  border-radius: 45px 0 0 0;
+  height: 525px;
+  left: 225px;
+}
+.accordion-menu .menu-item.item-brauciens {
+  background: #C4451A url("/images/menu/brauciens.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
+  border-radius: 45px 0 0 0;
+  height: 450px;
+  left: 300px;
+}
+.accordion-menu .menu-item.item-gaidisana {
+  background: #D48502 url("/images/menu/gaidisana.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
+  border-radius: 45px 0 0 0;
+  height: 375px;
+  left: 375px;
+}
+.accordion-menu .menu-item.item-pasteiga {
+  background: #CEA90D url("/images/menu/pasteiga.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
+  border-radius: 45px 0 0 0;
+  height: 300px;
+  left: 450px;
 }
 
 .container .hero-image-container {

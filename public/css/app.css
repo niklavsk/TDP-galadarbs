@@ -6,6 +6,23 @@ body, html {
   padding: 0;
 }
 
+body:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url("/images/menu/durvis_active.svg") url("/images/menu/krustojums_active.svg") url("/images/menu/gala stacija_active.svg") url("/images/menu/skatlogs_active.svg") url("/images/menu/brauciens_active.svg") url("/images/menu/gaidisana_active.svg") url("/images/menu/pasteiga.svg");
+}
+
+.content {
+  background-color: #222;
+}
+.content .container {
+  margin: auto;
+  max-width: 1500px;
+}
+
 h1 {
   font-size: 100px;
   font-weight: 900;
@@ -127,15 +144,41 @@ p {
   text-decoration: none;
 }
 
+.hero-image-container {
+  width: 100%;
+}
+.hero-image-container .hero-image-overlay {
+  display: inline-block;
+  height: 910px;
+  position: relative;
+}
+.hero-image-container .hero-image-overlay:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 910px;
+  display: inline-block;
+  background: linear-gradient(to bottom, rgba(29, 32, 48, 0) 30%, rgb(29, 32, 48) 95%);
+}
+.hero-image-container img {
+  width: 100%;
+}
+.hero-image-container.home {
+  height: 910px;
+}
+
 .accordion-menu {
   height: 750px;
   overflow: hidden;
+  position: relative;
 }
 .accordion-menu .menu-item {
   bottom: 0;
   display: inline-block;
   position: absolute;
-  width: 100%;
+  transition: margin-bottom 0.2s;
 }
 .accordion-menu .menu-item .item-contents {
   display: flex;
@@ -143,6 +186,9 @@ p {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 100px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   position: relative;
   top: 90px;
   left: 90px;
@@ -153,11 +199,20 @@ p {
 .accordion-menu .menu-item .item-contents .col-right .button-container {
   margin-top: 45px;
 }
+.accordion-menu .menu-item.lowered {
+  margin-bottom: -250px;
+}
 .accordion-menu .menu-item.item-durvis {
   background: #1D2030 url("/images/menu/durvis.svg") no-repeat 12px 12px;
   background-origin: content-box;
   background-size: cover;
   height: 750px;
+  width: 100%;
+}
+.accordion-menu .menu-item.item-durvis.active {
+  background: #1D2030 url("/images/menu/durvis_active.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
 }
 .accordion-menu .menu-item.item-krustojums {
   background: #1F247C url("/images/menu/krustojums.svg") no-repeat 12px 12px;
@@ -166,6 +221,12 @@ p {
   border-radius: 45px 0 0 0;
   height: 675px;
   left: 75px;
+  width: calc(100% - 75px);
+}
+.accordion-menu .menu-item.item-krustojums.active {
+  background: #1F247C url("/images/menu/krustojums_active.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
 }
 .accordion-menu .menu-item.item-galastacija {
   background: #511260 url("/images/menu/gala stacija.svg") no-repeat 12px 12px;
@@ -174,6 +235,12 @@ p {
   border-radius: 45px 0 0 0;
   height: 600px;
   left: 150px;
+  width: calc(100% - 150px);
+}
+.accordion-menu .menu-item.item-galastacija.active {
+  background: #511260 url("/images/menu/gala stacija_active.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
 }
 .accordion-menu .menu-item.item-skatlogs {
   background: #B72538 url("/images/menu/skatlogs.svg") no-repeat 12px 12px;
@@ -182,6 +249,12 @@ p {
   border-radius: 45px 0 0 0;
   height: 525px;
   left: 225px;
+  width: calc(100% - 225px);
+}
+.accordion-menu .menu-item.item-skatlogs.active {
+  background: #B72538 url("/images/menu/skatlogs_active.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
 }
 .accordion-menu .menu-item.item-brauciens {
   background: #C4451A url("/images/menu/brauciens.svg") no-repeat 12px 12px;
@@ -190,6 +263,12 @@ p {
   border-radius: 45px 0 0 0;
   height: 450px;
   left: 300px;
+  width: calc(100% - 300px);
+}
+.accordion-menu .menu-item.item-brauciens.active {
+  background: #C4451A url("/images/menu/brauciens_active.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
 }
 .accordion-menu .menu-item.item-gaidisana {
   background: #D48502 url("/images/menu/gaidisana.svg") no-repeat 12px 12px;
@@ -198,6 +277,12 @@ p {
   border-radius: 45px 0 0 0;
   height: 375px;
   left: 375px;
+  width: calc(100% - 375px);
+}
+.accordion-menu .menu-item.item-gaidisana.active {
+  background: #D48502 url("/images/menu/gaidisana_active.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
 }
 .accordion-menu .menu-item.item-pasteiga {
   background: #CEA90D url("/images/menu/pasteiga.svg") no-repeat 12px 12px;
@@ -206,36 +291,37 @@ p {
   border-radius: 45px 0 0 0;
   height: 300px;
   left: 450px;
+  width: calc(100% - 450px);
+}
+.accordion-menu .menu-item.item-pasteiga.active {
+  background: #CEA90D url("/images/menu/pasteiga_active.svg") no-repeat 12px 12px;
+  background-origin: content-box;
+  background-size: cover;
 }
 
-.container .hero-image-container {
-  width: 100%;
-}
-.container .hero-image-container img {
-  width: 100%;
-}
-.container .section-content {
+.section-content {
   padding: 0 50px 0 50px;
 }
-.container .section-content .row {
+.section-content .row {
   display: flex;
   flex-direction: row;
   gap: 60px;
   width: 100%;
 }
-.container .section-content .row .col-left,
-.container .section-content .row .col-right {
+.section-content .row .col-left,
+.section-content .row .col-right {
   width: 50%;
 }
-.container .navigation-button-container {
+
+.navigation-button-container {
   display: flex;
   justify-content: space-between;
 }
-.container .navigation-button-container a {
+.navigation-button-container a {
   color: #FFFFFF;
   text-decoration: none;
 }
-.container .navigation-button-container a:hover {
+.navigation-button-container a:hover {
   color: #FFFFFF;
 }
 

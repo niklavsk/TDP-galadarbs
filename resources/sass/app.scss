@@ -16,6 +16,28 @@ body, html {
     padding: 0;
 }
 
+//Preload images
+body:after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/images/menu/durvis_active.svg") url("/images/menu/krustojums_active.svg")
+    url("/images/menu/gala stacija_active.svg") url("/images/menu/skatlogs_active.svg")
+    url("/images/menu/brauciens_active.svg") url("/images/menu/gaidisana_active.svg")
+    url("/images/menu/pasteiga.svg");
+}
+
+.content {
+    background-color: #222;
+
+    .container {
+        margin: auto;
+        max-width: 1500px;
+    }
+}
+
 h1 {
     font-size: 100px;
     font-weight: 900;
@@ -144,17 +166,48 @@ p {
     text-decoration: none;
 }
 
-// Homepage
+// Hero images
+.hero-image-container {
+    width: 100%;
 
+    .hero-image-overlay {
+        display: inline-block;
+        height: 910px;
+        position: relative;
+
+        &:after {
+            content:'';
+            position:absolute;
+            left:0;
+            top:0;
+            width:100%;
+            height: 910px;
+            display: inline-block;
+            background: linear-gradient(to bottom, rgba(29,32,48,0) 30%, rgba(29,32,48,1) 95%);
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    &.home {
+        height: 910px
+    }
+}
+
+// Homepage
 .accordion-menu {
     height: 750px;
     overflow: hidden;
+    position: relative;
 
     .menu-item {
         bottom: 0;
         display: inline-block;
         position: absolute;
-        width: 100%;
+
+        transition: margin-bottom 0.2s;
 
         .item-contents {
             display: flex;
@@ -162,6 +215,7 @@ p {
             justify-content: flex-start;
             align-items: flex-start;
             gap: 100px;
+            width: fit-content;
 
             position: relative;
             top: 90px;
@@ -176,11 +230,22 @@ p {
             }
         }
 
+        &.lowered {
+            margin-bottom: -250px;
+        }
+
         &.item-durvis {
             background: $color-dark-blue url("/images/menu/durvis.svg") no-repeat 12px 12px;
             background-origin: content-box;
             background-size: cover;
             height: 750px;
+            width: 100%;
+
+            &.active {
+                background: $color-dark-blue url("/images/menu/durvis_active.svg") no-repeat 12px 12px;
+                background-origin: content-box;
+                background-size: cover;
+            }
         }
 
         &.item-krustojums {
@@ -190,6 +255,13 @@ p {
             border-radius: 45px 0 0 0;
             height: 675px;
             left: 75px;
+            width: calc(100% - 75px);
+
+            &.active {
+                background: $color-blue url("/images/menu/krustojums_active.svg") no-repeat 12px 12px;
+                background-origin: content-box;
+                background-size: cover;
+            }
         }
 
         &.item-galastacija {
@@ -199,6 +271,13 @@ p {
             border-radius: 45px 0 0 0;
             height: 600px;
             left: 150px;
+            width: calc(100% - 150px);
+
+            &.active {
+                background: $color-purple url("/images/menu/gala stacija_active.svg") no-repeat 12px 12px;
+                background-origin: content-box;
+                background-size: cover;
+            }
         }
 
         &.item-skatlogs {
@@ -208,6 +287,13 @@ p {
             border-radius: 45px 0 0 0;
             height: 525px;
             left: 225px;
+            width: calc(100% - 225px);
+
+            &.active {
+                background: $color-red url("/images/menu/skatlogs_active.svg") no-repeat 12px 12px;
+                background-origin: content-box;
+                background-size: cover;
+            }
         }
 
         &.item-brauciens {
@@ -217,6 +303,13 @@ p {
             border-radius: 45px 0 0 0;
             height: 450px;
             left: 300px;
+            width: calc(100% - 300px);
+
+            &.active {
+                background: $color-orange url("/images/menu/brauciens_active.svg") no-repeat 12px 12px;
+                background-origin: content-box;
+                background-size: cover;
+            }
         }
 
         &.item-gaidisana {
@@ -226,6 +319,13 @@ p {
             border-radius: 45px 0 0 0;
             height: 375px;
             left: 375px;
+            width: calc(100% - 375px);
+
+            &.active {
+                background: $color-light-orange url("/images/menu/gaidisana_active.svg") no-repeat 12px 12px;
+                background-origin: content-box;
+                background-size: cover;
+            }
         }
 
         &.item-pasteiga {
@@ -235,49 +335,45 @@ p {
             border-radius: 45px 0 0 0;
             height: 300px;
             left: 450px;
+            width: calc(100% - 450px);
+
+            &.active {
+                background: $color-yellow url("/images/menu/pasteiga_active.svg") no-repeat 12px 12px;
+                background-origin: content-box;
+                background-size: cover;
+            }
         }
     }
 }
 
 // Section page
+.section-content {
+    padding: 0 50px 0 50px;
 
-.container {
-    .hero-image-container {
+    .row {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
         width: 100%;
 
-        img {
-            width: 100%;
+        .col-left,
+        .col-right {
+            width: 50%;
         }
     }
+}
 
-    .section-content {
-        padding: 0 50px 0 50px;
-
-        .row {
-            display: flex;
-            flex-direction: row;
-            gap: 60px;
-            width: 100%;
-
-            .col-left,
-            .col-right {
-                width: 50%;
-            }
-        }
-    }
-
-    .navigation-button-container {
-        display: flex;
-        justify-content: space-between;
+.navigation-button-container {
+    display: flex;
+    justify-content: space-between;
 
 
-        a {
+    a {
+        color: #FFFFFF;
+        text-decoration: none;
+
+        &:hover {
             color: #FFFFFF;
-            text-decoration: none;
-
-            &:hover {
-                color: #FFFFFF;
-            }
         }
     }
 }

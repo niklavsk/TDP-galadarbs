@@ -4,7 +4,89 @@
     dark-blue
 @endsection
 
+@section('scripts')
+    <script>
+        $( document ).ready(function() {
+            $('.menu-item').click(function() {
+                $('.menu-item').removeClass('active');
+                $('.menu-item').removeClass('lowered');
+            });
+
+            $('.item-durvis').click(function() {
+                // var itemArray = ['.item-krustojums', '.item-galastacija'];
+                //
+                // itemArray.each(function(value) {
+                //     $(value).addClass("lowered");
+                // });
+
+                // $('.menu-item').removeClass('active');
+                // $('.menu-item').removeClass('lowered');
+
+                $('.item-durvis').addClass('active');
+
+                $('.item-krustojums').addClass('lowered');
+                $('.item-galastacija').addClass('lowered');
+                $('.item-skatlogs').addClass('lowered');
+                $('.item-brauciens').addClass('lowered');
+                $('.item-gaidisana').addClass('lowered');
+                $('.item-pasteiga').addClass('lowered');
+            });
+
+            $('.item-krustojums').click(function() {
+                $('.item-krustojums').addClass('active');
+
+                $('.item-galastacija').addClass('lowered');
+                $('.item-skatlogs').addClass('lowered');
+                $('.item-brauciens').addClass('lowered');
+                $('.item-gaidisana').addClass('lowered');
+                $('.item-pasteiga').addClass('lowered');
+            });
+
+            $('.item-galastacija').click(function() {
+                $('.item-galastacija').addClass('active');
+
+                $('.item-skatlogs').addClass('lowered');
+                $('.item-brauciens').addClass('lowered');
+                $('.item-gaidisana').addClass('lowered');
+                $('.item-pasteiga').addClass('lowered');
+            });
+
+            $('.item-skatlogs').click(function() {
+                $('.item-skatlogs').addClass('active');
+
+                $('.item-brauciens').addClass('lowered');
+                $('.item-gaidisana').addClass('lowered');
+                $('.item-pasteiga').addClass('lowered');
+            });
+
+            $('.item-brauciens').click(function() {
+                $('.item-brauciens').addClass('active');
+
+                $('.item-gaidisana').addClass('lowered');
+                $('.item-pasteiga').addClass('lowered');
+            });
+
+            $('.item-gaidisana').click(function() {
+                $('.item-gaidisana').addClass('active');
+
+                $('.item-pasteiga').addClass('lowered');
+            });
+
+            $('.item-pasteiga').click(function() {
+                $('.item-pasteiga').addClass('active');
+            });
+        });
+
+    </script>
+@endsection
+
 @section('content')
+    <div class="hero-image-container home">
+        <div class="hero-image-overlay">
+            <img src="{{ url('/images/content/home/hero.jpg') }}" alt="">
+        </div>
+    </div>
+
     <div class="accordion-menu">
         <div class="menu-item item-durvis">
             <div class="item-contents">
@@ -126,7 +208,7 @@
             </div>
         </div>
 
-        <div class="menu-item item-pasteiga">
+        <div class="menu-item item-pasteiga active">
             <div class="item-contents">
                 <div class="col-left">
                     <h3>Pasteiga</h3>

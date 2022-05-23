@@ -7,26 +7,28 @@
         <script>
 
         </script>
-        @stack('scripts')
+        @yield('scripts')
     </head>
     <body>
-        <nav class="topnav">
-            <div class="logo-container">
-                <a href="{{ url('/') }}">
-                    <img src="{{ url('/images/logo.png') }}" alt="">
-                </a>
-            </div>
+        <div class="content">
+            <nav class="topnav">
+                <div class="logo-container">
+                    <a href="{{ url('/') }}">
+                        <img src="{{ url('/images/logo.png') }}" alt="">
+                    </a>
+                </div>
 
-            <div class="language-links-container">
-                <ul class="language-links">
-                    <li class="active">LV</li>
-                    <li>EN</li>
-                </ul>
-            </div>
-        </nav>
+                <div class="language-links-container">
+                    <ul class="language-links">
+                        <li class="active">LV</li>
+                        <li>EN</li>
+                    </ul>
+                </div>
+            </nav>
 
-        <div class="container @yield('color')">
-            @yield('content')
+            <div class="container @yield('color')">
+                @yield('content')
+            </div>
         </div>
     </body>
 </html>

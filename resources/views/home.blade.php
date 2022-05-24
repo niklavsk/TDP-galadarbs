@@ -6,22 +6,13 @@
 
 @section('scripts')
     <script>
-        $( document ).ready(function() {
+        $(document).ready(function() {
             $('.menu-item').click(function() {
                 $('.menu-item').removeClass('active');
                 $('.menu-item').removeClass('lowered');
             });
 
             $('.item-durvis').click(function() {
-                // var itemArray = ['.item-krustojums', '.item-galastacija'];
-                //
-                // itemArray.each(function(value) {
-                //     $(value).addClass("lowered");
-                // });
-
-                // $('.menu-item').removeClass('active');
-                // $('.menu-item').removeClass('lowered');
-
                 $('.item-durvis').addClass('active');
 
                 $('.item-krustojums').addClass('lowered');
@@ -76,7 +67,6 @@
                 $('.item-pasteiga').addClass('active');
             });
         });
-
     </script>
 @endsection
 

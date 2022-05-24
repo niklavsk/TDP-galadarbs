@@ -8,6 +8,42 @@
     dark-blue
 @endsection
 
+@section('image-1')
+    <img src="{{ url('/images/content/durvis/1.jpg') }}" alt="">
+@endsection
+
+@section('image-2')
+    <img src="{{ url('/images/content/durvis/2.jpg') }}" alt="">
+@endsection
+
+@section('image-3')
+    <img src="{{ url('/images/content/durvis/3.jpg') }}" alt="">
+@endsection
+
+@section('image-4')
+    <img src="{{ url('/images/content/durvis/4.jpg') }}" alt="">
+@endsection
+
+@section('image-5')
+    <img src="{{ url('/images/content/durvis/5.jpg') }}" alt="">
+@endsection
+
+@section('image-6')
+    <img src="{{ url('/images/content/durvis/6.jpg') }}" alt="">
+@endsection
+
+@section('image-7')
+    <img src="{{ url('/images/content/durvis/7.jpg') }}" alt="">
+@endsection
+
+@section('image-8')
+    <img src="{{ url('/images/content/durvis/8.jpg') }}" alt="">
+@endsection
+
+@section('image-9')
+    <img src="{{ url('/images/content/durvis/9.jpg') }}" alt="">
+@endsection
+
 @section('title')
     Krustojums
 @endsection

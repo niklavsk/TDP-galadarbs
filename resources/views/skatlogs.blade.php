@@ -8,6 +8,42 @@
     red
 @endsection
 
+@section('image-1')
+    <img src="{{ url('/images/content/skatlogs/1.jpg') }}" alt="">
+@endsection
+
+@section('image-2')
+    <img src="{{ url('/images/content/skatlogs/2.jpg') }}" alt="">
+@endsection
+
+@section('image-3')
+    <img src="{{ url('/images/content/skatlogs/3.jpg') }}" alt="">
+@endsection
+
+@section('image-4')
+    <img src="{{ url('/images/content/skatlogs/4.jpg') }}" alt="">
+@endsection
+
+@section('image-5')
+    <img src="{{ url('/images/content/skatlogs/5.jpg') }}" alt="">
+@endsection
+
+@section('image-6')
+    <img src="{{ url('/images/content/skatlogs/6.jpg') }}" alt="">
+@endsection
+
+@section('image-7')
+    <img src="{{ url('/images/content/skatlogs/7.jpg') }}" alt="">
+@endsection
+
+@section('image-8')
+    <img src="{{ url('/images/content/skatlogs/8.jpg') }}" alt="">
+@endsection
+
+@section('image-9')
+    <img src="{{ url('/images/content/skatlogs/9.jpg') }}" alt="">
+@endsection
+
 @section('title')
     Skatlogs
 @endsection

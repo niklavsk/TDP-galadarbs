@@ -368,6 +368,86 @@ $accordion-menu-border-radius: 54px 0 0 0;
 }
 
 // Section page
+.image-carousel-container {
+    .image-container {
+        height: 900px;
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+
+        .image-wrapper {
+            display: none;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .back,
+        .forward {
+            cursor: pointer;
+            position: absolute;
+            top: 48%;
+            width: auto;
+            margin-top: -23px;
+            padding: 17px;
+            color: grey;
+            font-weight: bold;
+            font-size: 19px;
+            transition: 0.4s ease;
+            border-radius: 0 5px 5px 0;
+            user-select: none;
+
+            &:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+        }
+
+        .forward {
+            right: 0;
+            border-radius: 4px 0 0 4px;
+        }
+    }
+}
+
+
+
+
+.dots {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 3px;
+    background-color: #acc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+.enable,
+.dots:hover {
+    background-color: #717161;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.4s;
+    animation-name: fade;
+    animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+}
+
+@keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+}
+
+
+
 .section-content {
     padding: 0 50px 0 50px;
 

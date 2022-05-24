@@ -8,6 +8,42 @@
     blue
 @endsection
 
+@section('image-1')
+    <img src="{{ url('/images/content/krustojums/1.jpg') }}" alt="">
+@endsection
+
+@section('image-2')
+    <img src="{{ url('/images/content/krustojums/2.jpg') }}" alt="">
+@endsection
+
+@section('image-3')
+    <img src="{{ url('/images/content/krustojums/3.jpg') }}" alt="">
+@endsection
+
+@section('image-4')
+    <img src="{{ url('/images/content/krustojums/4.jpg') }}" alt="">
+@endsection
+
+@section('image-5')
+    <img src="{{ url('/images/content/krustojums/5.jpg') }}" alt="">
+@endsection
+
+@section('image-6')
+    <img src="{{ url('/images/content/krustojums/6.jpg') }}" alt="">
+@endsection
+
+@section('image-7')
+    <img src="{{ url('/images/content/krustojums/7.jpg') }}" alt="">
+@endsection
+
+@section('image-8')
+    <img src="{{ url('/images/content/krustojums/8.jpg') }}" alt="">
+@endsection
+
+@section('image-9')
+    <img src="{{ url('/images/content/krustojums/9.jpg') }}" alt="">
+@endsection
+
 @section('title')
     Krustojums
 @endsection

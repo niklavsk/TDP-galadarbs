@@ -59,10 +59,10 @@ h2 {
 }
 
 h3 {
-    font-size: 40px;
+    font-size: 50px;
     font-style: italic;
     font-weight: 900;
-    line-height: 26px;
+    line-height: 50px;
     margin: 0;
     padding: 0;
     text-transform: uppercase;
@@ -88,7 +88,7 @@ h5 {
 }
 
 h6 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
     line-height: 22px;
     margin: 0;
@@ -197,6 +197,10 @@ p {
 }
 
 // Homepage
+$accordion-menu-space: 65px;
+$accordion-menu-background-position: 10px 12px;
+$accordion-menu-border-radius: 54px 0 0 0;
+
 .accordion-menu {
     height: 750px;
     overflow: hidden;
@@ -206,8 +210,8 @@ p {
         bottom: 0;
         display: inline-block;
         position: absolute;
-
-        transition: margin-bottom 0.2s;
+        transition: margin-bottom 0.2s, left 0.2s, width 0.2s;
+        width: 100%;
 
         .item-contents {
             display: flex;
@@ -218,11 +222,11 @@ p {
             width: fit-content;
 
             position: relative;
-            top: 90px;
-            left: 90px;
+            top: 80px;
+            left: 80px;
 
             .col-right {
-                max-width: 450px;
+                width: 400px;
 
                 .button-container {
                     margin-top: 45px;
@@ -235,112 +239,129 @@ p {
         }
 
         &.item-durvis {
-            background: $color-dark-blue url("/images/menu/durvis.svg") no-repeat 12px 12px;
+            background: $color-dark-blue url("/images/menu/durvis.svg") no-repeat $accordion-menu-background-position;
             background-origin: content-box;
-            background-size: cover;
+            background-size: 1500px auto;
             height: 750px;
-            width: 100%;
 
             &.active {
-                background: $color-dark-blue url("/images/menu/durvis_active.svg") no-repeat 12px 12px;
+                background: $color-dark-blue url("/images/menu/durvis_active.svg") no-repeat $accordion-menu-background-position;
                 background-origin: content-box;
-                background-size: cover;
+                background-size: 1500px auto;
             }
         }
 
         &.item-krustojums {
-            background: $color-blue url("/images/menu/krustojums.svg") no-repeat 12px 12px;
+            background: $color-blue url("/images/menu/krustojums.svg") no-repeat $accordion-menu-background-position;
             background-origin: content-box;
-            background-size: cover;
-            border-radius: 45px 0 0 0;
-            height: 675px;
-            left: 75px;
-            width: calc(100% - 75px);
+            background-size: 1500px auto;
+            border-radius: $accordion-menu-border-radius;
+            height: calc(750px - $accordion-menu-space);
+            left: $accordion-menu-space;
+
+            @media screen and (max-width: 1230px) {
+                left: 0;
+            }
 
             &.active {
-                background: $color-blue url("/images/menu/krustojums_active.svg") no-repeat 12px 12px;
+                background: $color-blue url("/images/menu/krustojums_active.svg") no-repeat $accordion-menu-background-position;
                 background-origin: content-box;
-                background-size: cover;
+                background-size: 1500px auto;
             }
         }
 
         &.item-galastacija {
-            background: $color-purple url("/images/menu/gala stacija.svg") no-repeat 12px 12px;
+            background: $color-purple url("/images/menu/gala stacija.svg") no-repeat $accordion-menu-background-position;
             background-origin: content-box;
-            background-size: cover;
-            border-radius: 45px 0 0 0;
-            height: 600px;
-            left: 150px;
-            width: calc(100% - 150px);
+            background-size: 1500px auto;
+            border-radius: $accordion-menu-border-radius;
+            height: calc(750px - 2 * $accordion-menu-space);
+            left: 2 * $accordion-menu-space;
+
+            @media screen and (max-width: 1230px) {
+                left: 0;
+            }
 
             &.active {
-                background: $color-purple url("/images/menu/gala stacija_active.svg") no-repeat 12px 12px;
+                background: $color-purple url("/images/menu/gala stacija_active.svg") no-repeat $accordion-menu-background-position;
                 background-origin: content-box;
-                background-size: cover;
+                background-size: 1500px auto;
             }
         }
 
         &.item-skatlogs {
-            background: $color-red url("/images/menu/skatlogs.svg") no-repeat 12px 12px;
+            background: $color-red url("/images/menu/skatlogs.svg") no-repeat $accordion-menu-background-position;
             background-origin: content-box;
-            background-size: cover;
-            border-radius: 45px 0 0 0;
-            height: 525px;
-            left: 225px;
-            width: calc(100% - 225px);
+            background-size: 1500px auto;
+            border-radius: $accordion-menu-border-radius;
+            height: calc(750px - 3 * $accordion-menu-space);
+            left: 3 * $accordion-menu-space;
+
+            @media screen and (max-width: 1230px) {
+                left: 0;
+            }
 
             &.active {
-                background: $color-red url("/images/menu/skatlogs_active.svg") no-repeat 12px 12px;
+                background: $color-red url("/images/menu/skatlogs_active.svg") no-repeat $accordion-menu-background-position;
                 background-origin: content-box;
-                background-size: cover;
+                background-size: 1500px auto;
             }
         }
 
         &.item-brauciens {
-            background: $color-orange url("/images/menu/brauciens.svg") no-repeat 12px 12px;
+            background: $color-orange url("/images/menu/brauciens.svg") no-repeat $accordion-menu-background-position;
             background-origin: content-box;
-            background-size: cover;
-            border-radius: 45px 0 0 0;
-            height: 450px;
-            left: 300px;
-            width: calc(100% - 300px);
+            background-size: 1500px auto;
+            border-radius: $accordion-menu-border-radius;
+            height: calc(750px - 4 * $accordion-menu-space);
+            left: 4 * $accordion-menu-space;
+
+            @media screen and (max-width: 1230px) {
+                left: 0;
+            }
 
             &.active {
-                background: $color-orange url("/images/menu/brauciens_active.svg") no-repeat 12px 12px;
+                background: $color-orange url("/images/menu/brauciens_active.svg") no-repeat $accordion-menu-background-position;
                 background-origin: content-box;
-                background-size: cover;
+                background-size: 1500px auto;
             }
         }
 
         &.item-gaidisana {
-            background: $color-light-orange url("/images/menu/gaidisana.svg") no-repeat 12px 12px;
+            background: $color-light-orange url("/images/menu/gaidisana.svg") no-repeat $accordion-menu-background-position;
             background-origin: content-box;
-            background-size: cover;
-            border-radius: 45px 0 0 0;
-            height: 375px;
-            left: 375px;
-            width: calc(100% - 375px);
+            background-size: 1500px auto;
+            border-radius: $accordion-menu-border-radius;
+            height: calc(750px - 5 * $accordion-menu-space);
+            left: 5 * $accordion-menu-space;
+
+            @media screen and (max-width: 1230px) {
+                left: 0;
+            }
 
             &.active {
-                background: $color-light-orange url("/images/menu/gaidisana_active.svg") no-repeat 12px 12px;
+                background: $color-light-orange url("/images/menu/gaidisana_active.svg") no-repeat $accordion-menu-background-position;
                 background-origin: content-box;
-                background-size: cover;
+                background-size: 1500px auto;
             }
         }
 
         &.item-pasteiga {
-            background: $color-yellow url("/images/menu/pasteiga.svg") no-repeat 12px 12px;
+            background: $color-yellow url("/images/menu/pasteiga.svg") no-repeat $accordion-menu-background-position;
             background-origin: content-box;
-            background-size: cover;
-            border-radius: 45px 0 0 0;
-            height: 300px;
-            left: 450px;
-            width: calc(100% - 450px);
+            background-size: 1500px auto;
+            border-radius: $accordion-menu-border-radius;
+            height: calc(750px - 6 * $accordion-menu-space);
+            left: 6 * $accordion-menu-space;
+
+            @media screen and (max-width: 1230px) {
+                left: 0;
+            }
 
             &.active {
-                background: $color-yellow url("/images/menu/pasteiga_active.svg") no-repeat 12px 12px;
+                background: $color-yellow url("/images/menu/pasteiga_active.svg") no-repeat $accordion-menu-background-position;
                 background-origin: content-box;
-                background-size: cover;
+                background-size: 1500px auto;
             }
         }
     }

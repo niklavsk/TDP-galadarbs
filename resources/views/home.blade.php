@@ -131,7 +131,7 @@
         <div class="menu-item item-galastacija">
             <div class="item-contents">
                 <div class="col-left">
-                    <h3>Gala stacija</h3>
+                    <h3>Gala<br>stacija</h3>
                 </div>
 
                 <div class="col-right">

@@ -44,10 +44,10 @@ h2 {
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 50px;
   font-style: italic;
   font-weight: 900;
-  line-height: 26px;
+  line-height: 50px;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -73,7 +73,7 @@ h5 {
 }
 
 h6 {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
   line-height: 22px;
   margin: 0;
@@ -178,7 +178,8 @@ p {
   bottom: 0;
   display: inline-block;
   position: absolute;
-  transition: margin-bottom 0.2s;
+  transition: margin-bottom 0.2s, left 0.2s, width 0.2s;
+  width: 100%;
 }
 .accordion-menu .menu-item .item-contents {
   display: flex;
@@ -190,11 +191,11 @@ p {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  top: 90px;
-  left: 90px;
+  top: 80px;
+  left: 80px;
 }
 .accordion-menu .menu-item .item-contents .col-right {
-  max-width: 450px;
+  width: 400px;
 }
 .accordion-menu .menu-item .item-contents .col-right .button-container {
   margin-top: 45px;
@@ -203,100 +204,123 @@ p {
   margin-bottom: -250px;
 }
 .accordion-menu .menu-item.item-durvis {
-  background: #1D2030 url("/images/menu/durvis.svg") no-repeat 12px 12px;
+  background: #1D2030 url("/images/menu/durvis.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
+  background-size: 1500px auto;
   height: 750px;
-  width: 100%;
 }
 .accordion-menu .menu-item.item-durvis.active {
-  background: #1D2030 url("/images/menu/durvis_active.svg") no-repeat 12px 12px;
+  background: #1D2030 url("/images/menu/durvis_active.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
+  background-size: 1500px auto;
 }
 .accordion-menu .menu-item.item-krustojums {
-  background: #1F247C url("/images/menu/krustojums.svg") no-repeat 12px 12px;
+  background: #1F247C url("/images/menu/krustojums.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
-  border-radius: 45px 0 0 0;
-  height: 675px;
-  left: 75px;
-  width: calc(100% - 75px);
+  background-size: 1500px auto;
+  border-radius: 54px 0 0 0;
+  height: 685px;
+  left: 65px;
+}
+@media screen and (max-width: 1230px) {
+  .accordion-menu .menu-item.item-krustojums {
+    left: 0;
+  }
 }
 .accordion-menu .menu-item.item-krustojums.active {
-  background: #1F247C url("/images/menu/krustojums_active.svg") no-repeat 12px 12px;
+  background: #1F247C url("/images/menu/krustojums_active.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
+  background-size: 1500px auto;
 }
 .accordion-menu .menu-item.item-galastacija {
-  background: #511260 url("/images/menu/gala stacija.svg") no-repeat 12px 12px;
+  background: #511260 url("/images/menu/gala stacija.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
-  border-radius: 45px 0 0 0;
-  height: 600px;
-  left: 150px;
-  width: calc(100% - 150px);
+  background-size: 1500px auto;
+  border-radius: 54px 0 0 0;
+  height: 620px;
+  left: 130px;
+}
+@media screen and (max-width: 1230px) {
+  .accordion-menu .menu-item.item-galastacija {
+    left: 0;
+  }
 }
 .accordion-menu .menu-item.item-galastacija.active {
-  background: #511260 url("/images/menu/gala stacija_active.svg") no-repeat 12px 12px;
+  background: #511260 url("/images/menu/gala stacija_active.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
+  background-size: 1500px auto;
 }
 .accordion-menu .menu-item.item-skatlogs {
-  background: #B72538 url("/images/menu/skatlogs.svg") no-repeat 12px 12px;
+  background: #B72538 url("/images/menu/skatlogs.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
-  border-radius: 45px 0 0 0;
-  height: 525px;
-  left: 225px;
-  width: calc(100% - 225px);
+  background-size: 1500px auto;
+  border-radius: 54px 0 0 0;
+  height: 555px;
+  left: 195px;
+}
+@media screen and (max-width: 1230px) {
+  .accordion-menu .menu-item.item-skatlogs {
+    left: 0;
+  }
 }
 .accordion-menu .menu-item.item-skatlogs.active {
-  background: #B72538 url("/images/menu/skatlogs_active.svg") no-repeat 12px 12px;
+  background: #B72538 url("/images/menu/skatlogs_active.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
+  background-size: 1500px auto;
 }
 .accordion-menu .menu-item.item-brauciens {
-  background: #C4451A url("/images/menu/brauciens.svg") no-repeat 12px 12px;
+  background: #C4451A url("/images/menu/brauciens.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
-  border-radius: 45px 0 0 0;
-  height: 450px;
-  left: 300px;
-  width: calc(100% - 300px);
+  background-size: 1500px auto;
+  border-radius: 54px 0 0 0;
+  height: 490px;
+  left: 260px;
+}
+@media screen and (max-width: 1230px) {
+  .accordion-menu .menu-item.item-brauciens {
+    left: 0;
+  }
 }
 .accordion-menu .menu-item.item-brauciens.active {
-  background: #C4451A url("/images/menu/brauciens_active.svg") no-repeat 12px 12px;
+  background: #C4451A url("/images/menu/brauciens_active.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
+  background-size: 1500px auto;
 }
 .accordion-menu .menu-item.item-gaidisana {
-  background: #D48502 url("/images/menu/gaidisana.svg") no-repeat 12px 12px;
+  background: #D48502 url("/images/menu/gaidisana.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
-  border-radius: 45px 0 0 0;
-  height: 375px;
-  left: 375px;
-  width: calc(100% - 375px);
+  background-size: 1500px auto;
+  border-radius: 54px 0 0 0;
+  height: 425px;
+  left: 325px;
+}
+@media screen and (max-width: 1230px) {
+  .accordion-menu .menu-item.item-gaidisana {
+    left: 0;
+  }
 }
 .accordion-menu .menu-item.item-gaidisana.active {
-  background: #D48502 url("/images/menu/gaidisana_active.svg") no-repeat 12px 12px;
+  background: #D48502 url("/images/menu/gaidisana_active.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
+  background-size: 1500px auto;
 }
 .accordion-menu .menu-item.item-pasteiga {
-  background: #CEA90D url("/images/menu/pasteiga.svg") no-repeat 12px 12px;
+  background: #CEA90D url("/images/menu/pasteiga.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
-  border-radius: 45px 0 0 0;
-  height: 300px;
-  left: 450px;
-  width: calc(100% - 450px);
+  background-size: 1500px auto;
+  border-radius: 54px 0 0 0;
+  height: 360px;
+  left: 390px;
+}
+@media screen and (max-width: 1230px) {
+  .accordion-menu .menu-item.item-pasteiga {
+    left: 0;
+  }
 }
 .accordion-menu .menu-item.item-pasteiga.active {
-  background: #CEA90D url("/images/menu/pasteiga_active.svg") no-repeat 12px 12px;
+  background: #CEA90D url("/images/menu/pasteiga_active.svg") no-repeat 10px 12px;
   background-origin: content-box;
-  background-size: cover;
+  background-size: 1500px auto;
 }
 
 .section-content {

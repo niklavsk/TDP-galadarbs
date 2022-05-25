@@ -8,9 +8,17 @@ $color-red: #B72538;
 $color-purple: #511260;
 $color-blue: #1F247C;
 $color-dark-blue: #1D2030;
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+$hero-image-height: 910px;
+
+$accordion-menu-space: 65px;
+$accordion-menu-background-position: 10px 12px;
+$accordion-menu-border-radius: 54px 0 0 0;
 
 body, html {
-    color: #FFFFFF;
+    color: $color-white;
     font-family: 'Public Sans', sans-serif;
     margin: 0;
     padding: 0;
@@ -18,15 +26,15 @@ body, html {
 
 //Preload images
 body:after{
-    position: absolute;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    z-index: -1;
     content: url("/images/menu/durvis_active.svg") url("/images/menu/krustojums_active.svg")
     url("/images/menu/gala stacija_active.svg") url("/images/menu/skatlogs_active.svg")
     url("/images/menu/brauciens_active.svg") url("/images/menu/gaidisana_active.svg")
     url("/images/menu/pasteiga.svg");
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    z-index: -1;
 }
 
 .content {
@@ -40,8 +48,8 @@ body:after{
 
 h1 {
     font-size: 100px;
-    font-weight: 900;
     font-style: italic;
+    font-weight: 900;
     line-height: 110px;
     margin: 0;
     padding: 0;
@@ -54,8 +62,8 @@ h2 {
     font-weight: 900;
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
 }
 
 h3 {
@@ -65,14 +73,14 @@ h3 {
     line-height: 50px;
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
 }
 
 h4 {
     font-size: 40px;
-    font-weight: 900;
     font-style: italic;
+    font-weight: 900;
     line-height: 26px;
     margin: 0;
     padding: 0;
@@ -135,17 +143,17 @@ p {
         top: 24px;
 
         ul {
+            list-style-type: none;
             margin: 0;
             padding: 0;
-            list-style-type: none;
 
             li {
-                float: left;
                 color: #B3B3B3;
-                padding: 0 18px;
+                float: left;
                 font-size: 30px;
-                font-weight: 900;
                 font-style: italic;
+                font-weight: 900;
+                padding: 0 18px;
 
                 &.active {
                     color: white;
@@ -157,12 +165,14 @@ p {
 
 // Buttons
 .button-white {
-    color: #000000;
-    background-color: #ffffff;
-    font-weight: 900;
-    font-size: 14px;
-    padding: 15px;
+    background-color: $color-white;
+    border: none;
     border-radius: 6px;
+    color: $color-black;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 15px;
     text-decoration: none;
 }
 
@@ -172,18 +182,35 @@ p {
 
     .hero-image-overlay {
         display: inline-block;
-        height: 910px;
+        height: $hero-image-height;
         position: relative;
 
         &:after {
-            content:'';
-            position:absolute;
-            left:0;
-            top:0;
-            width:100%;
-            height: 910px;
-            display: inline-block;
             background: linear-gradient(to bottom, rgba(29,32,48,0) 30%, rgba(29,32,48,1) 95%);
+            content: '';
+            display: inline-block;
+            height: $hero-image-height;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .hero-image-title {
+            //height: $hero-image-height;
+
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+
+            .button-container {
+                margin: auto;
+                width: max-content;
+            }
         }
     }
 
@@ -192,15 +219,11 @@ p {
     }
 
     &.home {
-        height: 910px
+        height: $hero-image-height;
     }
 }
 
 // Homepage
-$accordion-menu-space: 65px;
-$accordion-menu-background-position: 10px 12px;
-$accordion-menu-border-radius: 54px 0 0 0;
-
 .accordion-menu {
     height: 750px;
     overflow: hidden;
@@ -214,16 +237,15 @@ $accordion-menu-border-radius: 54px 0 0 0;
         width: 100%;
 
         .item-contents {
+            align-items: flex-start;
             display: flex;
             flex-direction: row;
-            justify-content: flex-start;
-            align-items: flex-start;
             gap: 100px;
-            width: fit-content;
-
+            justify-content: flex-start;
+            left: 80px;
             position: relative;
             top: 80px;
-            left: 80px;
+            width: fit-content;
 
             .col-right {
                 width: 400px;
@@ -371,9 +393,9 @@ $accordion-menu-border-radius: 54px 0 0 0;
 .image-carousel-container {
     .image-container {
         height: 900px;
-        position: relative;
         margin: auto;
         overflow: hidden;
+        position: relative;
 
         .image-wrapper {
             display: none;
@@ -385,18 +407,18 @@ $accordion-menu-border-radius: 54px 0 0 0;
 
         .back,
         .forward {
+            border-radius: 0 5px 5px 0;
+            color: grey;
             cursor: pointer;
-            position: absolute;
-            top: 48%;
-            width: auto;
+            font-size: 19px;
+            font-weight: bold;
             margin-top: -23px;
             padding: 17px;
-            color: grey;
-            font-weight: bold;
-            font-size: 19px;
+            position: absolute;
+            top: 48%;
             transition: 0.4s ease;
-            border-radius: 0 5px 5px 0;
             user-select: none;
+            width: auto;
 
             &:hover {
                 background-color: rgba(0,0,0,0.8);
@@ -404,24 +426,21 @@ $accordion-menu-border-radius: 54px 0 0 0;
         }
 
         .forward {
-            right: 0;
             border-radius: 4px 0 0 4px;
+            right: 0;
         }
     }
 }
 
-
-
-
 .dots {
-    cursor: pointer;
-    height: 16px;
-    width: 16px;
-    margin: 0 3px;
     background-color: #acc;
     border-radius: 50%;
+    cursor: pointer;
     display: inline-block;
+    height: 16px;
+    margin: 0 3px;
     transition: background-color 0.5s ease;
+    width: 16px;
 }
 
 .enable,
@@ -446,8 +465,6 @@ $accordion-menu-border-radius: 54px 0 0 0;
     to {opacity: 2}
 }
 
-
-
 .section-content {
     padding: 0 50px 0 50px;
 
@@ -468,13 +485,12 @@ $accordion-menu-border-radius: 54px 0 0 0;
     display: flex;
     justify-content: space-between;
 
-
     a {
-        color: #FFFFFF;
+        color: $color-white;
         text-decoration: none;
 
         &:hover {
-            color: #FFFFFF;
+            color: $color-white;
         }
     }
 }

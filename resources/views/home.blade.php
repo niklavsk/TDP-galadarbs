@@ -74,6 +74,14 @@
     <div class="hero-image-container home">
         <div class="hero-image-overlay">
             <img src="{{ url('/images/content/home/hero.jpg') }}" alt="">
+
+            <div class="hero-image-title">
+                <h1>Mans ceļš<br>uz universitāti</h1>
+
+                <div class="button-container">
+                    <button class="button-white">Apskatīt sadaļas</button>
+                </div>
+            </div>
         </div>
     </div>
 

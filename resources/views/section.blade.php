@@ -6,11 +6,40 @@
             var slidePosition = 1;
             SlideShow(slidePosition);
 
-            $('.menu-item').click(function() {
-                $('.menu-item').removeClass('active');
-                $('.menu-item').removeClass('lowered');
+            $('#image-1').click(function() {
+                currentSlide(1);
+            });
 
+            $('#image-2').click(function() {
+                currentSlide(2);
+            });
 
+            $('#image-3').click(function() {
+                currentSlide(3);
+            });
+
+            $('#image-4').click(function() {
+                currentSlide(4);
+            });
+
+            $('#image-5').click(function() {
+                currentSlide(5);
+            });
+
+            $('#image-6').click(function() {
+                currentSlide(6);
+            });
+
+            $('#image-7').click(function() {
+                currentSlide(7);
+            });
+
+            $('#image-8').click(function() {
+                currentSlide(8);
+            });
+
+            $('#image-9').click(function() {
+                currentSlide(9);
             });
         });
 
@@ -78,14 +107,60 @@
                 <a class="forward" onclick="plusSlides(1)">&#10095;</a>
             </div>
 
-            <div style="text-align:center">
-                <span class="dots" onclick="currentSlide(1)"></span>
-                <span class="dots" onclick="currentSlide(2)"></span>
-                <span class="dots" onclick="currentSlide(3)"></span>
-                <span class="dots" onclick="currentSlide(4)"></span>
-                <span class="dots" onclick="currentSlide(5)"></span>
-                <span class="dots" onclick="currentSlide(6)"></span>
-                <span class="dots" onclick="currentSlide(7)"></span>
+            <div class="image-carousel-dots" style="text-align:center">
+                <div class="dot" id="image-1">
+                    <div class="dot-image-container">
+                        @yield('image-1')
+                    </div>
+                </div>
+
+                <div class="dot" id="image-2">
+                    <div class="dot-image-container">
+                        @yield('image-2')
+                    </div>
+                </div>
+
+                <div class="dot" id="image-3" onclick="currentSlide(3)">
+                    <div class="dot-image-container">
+                        @yield('image-3')
+                    </div>
+                </div>
+
+                <div class="dot" id="image-4" onclick="currentSlide(4)">
+                    <div class="dot-image-container">
+                        @yield('image-4')
+                    </div>
+                </div>
+
+                <div class="dot" id="image-5" onclick="currentSlide(5)">
+                    <div class="dot-image-container">
+                        @yield('image-5')
+                    </div>
+                </div>
+
+                <div class="dot" id="image-6" onclick="currentSlide(6)">
+                    <div class="dot-image-container">
+                        @yield('image-6')
+                    </div>
+                </div>
+
+                <div class="dot" id="image-7" onclick="currentSlide(7)">
+                    <div class="dot-image-container">
+                        @yield('image-7')
+                    </div>
+                </div>
+
+                <div class="dot" id="image-8" onclick="currentSlide(8)">
+                    <div class="dot-image-container">
+                        @yield('image-8')
+                    </div>
+                </div>
+
+                <div class="dot" id="image-9" onclick="currentSlide(9)">
+                    <div class="dot-image-container">
+                        @yield('image-9')
+                    </div>
+                </div>
             </div>
     </div>
 

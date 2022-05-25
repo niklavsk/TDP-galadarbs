@@ -7,6 +7,12 @@
 @section('scripts')
     <script>
         $(document).ready(function() {
+            $('#button-sections').click(function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $('.item-pasteiga').offset().top
+                }, 1000);
+            });
+
             $('.menu-item').click(function() {
                 $('.menu-item').removeClass('active');
                 $('.menu-item').removeClass('lowered');
@@ -79,7 +85,7 @@
                 <h1>Mans ceļš<br>uz universitāti</h1>
 
                 <div class="button-container">
-                    <button class="button-white">Apskatīt sadaļas</button>
+                    <button id="button-sections" class="button-white">Apskatīt sadaļas</button>
                 </div>
             </div>
         </div>

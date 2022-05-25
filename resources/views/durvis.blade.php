@@ -9,15 +9,15 @@
 @endsection
 
 @section('image-1')
-    <img src="{{ url('/images/content/durvis/1.jpg') }}" alt="">
+    <img src="{{ url('/images/content/durvis/1.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-2')
-    <img src="{{ url('/images/content/durvis/2.jpg') }}" alt="">
+    <img src="{{ url('/images/content/durvis/2.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-3')
-    <img src="{{ url('/images/content/durvis/3.jpg') }}" alt="">
+    <img src="{{ url('/images/content/durvis/3.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-4')
@@ -25,11 +25,11 @@
 @endsection
 
 @section('image-5')
-    <img src="{{ url('/images/content/durvis/5.jpg') }}" alt="">
+    <img src="{{ url('/images/content/durvis/5.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-6')
-    <img src="{{ url('/images/content/durvis/6.jpg') }}" alt="">
+    <img src="{{ url('/images/content/durvis/6.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-7')
@@ -37,7 +37,7 @@
 @endsection
 
 @section('image-8')
-    <img src="{{ url('/images/content/durvis/8.jpg') }}" alt="">
+    <img src="{{ url('/images/content/durvis/8.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-9')

@@ -9,11 +9,11 @@
 @endsection
 
 @section('image-1')
-    <img src="{{ url('/images/content/krustojums/1.jpg') }}" alt="">
+    <img src="{{ url('/images/content/krustojums/1.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-2')
-    <img src="{{ url('/images/content/krustojums/2.jpg') }}" alt="">
+    <img src="{{ url('/images/content/krustojums/2.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-3')
@@ -21,7 +21,7 @@
 @endsection
 
 @section('image-4')
-    <img src="{{ url('/images/content/krustojums/4.jpg') }}" alt="">
+    <img src="{{ url('/images/content/krustojums/4.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-5')
@@ -29,7 +29,7 @@
 @endsection
 
 @section('image-6')
-    <img src="{{ url('/images/content/krustojums/6.jpg') }}" alt="">
+    <img src="{{ url('/images/content/krustojums/6.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-7')
@@ -41,7 +41,7 @@
 @endsection
 
 @section('image-9')
-    <img src="{{ url('/images/content/krustojums/9.jpg') }}" alt="">
+    <img src="{{ url('/images/content/krustojums/9.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('title')

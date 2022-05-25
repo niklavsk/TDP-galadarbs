@@ -17,27 +17,27 @@
 @endsection
 
 @section('image-3')
-    <img src="{{ url('/images/content/gaidisana/3.jpg') }}" alt="">
+    <img src="{{ url('/images/content/gaidisana/3.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-4')
-    <img src="{{ url('/images/content/gaidisana/4.jpg') }}" alt="">
+    <img src="{{ url('/images/content/gaidisana/4.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-5')
-    <img src="{{ url('/images/content/gaidisana/5.jpg') }}" alt="">
+    <img src="{{ url('/images/content/gaidisana/5.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-6')
-    <img src="{{ url('/images/content/gaidisana/6.jpg') }}" alt="">
+    <img src="{{ url('/images/content/gaidisana/6.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-7')
-    <img src="{{ url('/images/content/gaidisana/7.jpg') }}" alt="">
+    <img src="{{ url('/images/content/gaidisana/7.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-8')
-    <img src="{{ url('/images/content/gaidisana/8.jpg') }}" alt="">
+    <img src="{{ url('/images/content/gaidisana/8.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-9')

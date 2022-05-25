@@ -17,7 +17,7 @@
 @endsection
 
 @section('image-3')
-    <img src="{{ url('/images/content/pasteiga/3.jpg') }}" alt="">
+    <img src="{{ url('/images/content/pasteiga/3.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-4')

@@ -33,6 +33,8 @@ $accordion-menu-space: 65px;
 $accordion-menu-background-position: 10px 12px;
 $accordion-menu-border-radius: 54px 0 0 0;
 
+$image-carousel-container-height: 910px;
+
 body, html {
     color: $color-white;
     font-family: 'Public Sans', sans-serif;
@@ -403,43 +405,69 @@ p {
 
 // Section page
 .image-carousel-container {
+    margin: 80px 80px 0 80px;
+
     .image-container {
-        height: 900px;
+        background-color: rgba(255,255,255,0.5);
+        height: $image-carousel-container-height;
         margin: auto;
+        margin-bottom: 60px;
         overflow: hidden;
         position: relative;
+
+        &:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
 
         .image-wrapper {
             display: none;
 
+            &.selected {
+                display: block;
+            }
+
             img {
-                height: 100%;
+                height: calc($image-carousel-container-height - 20px);
+                left: 10px;
+                object-fit: cover;
+                position: absolute;
+                top: 10px;
+                width: calc(100% - 20px);
+
+                &.vertical {
+                    object-fit: contain;
+                }
             }
         }
 
         .back,
         .forward {
-            border-radius: 0 5px 5px 0;
-            color: grey;
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            color: $color-white;
             cursor: pointer;
-            font-size: 19px;
+            font-size: 26px;
             font-weight: bold;
             margin-top: -23px;
             padding: 17px;
             position: absolute;
             top: 48%;
             transition: 0.4s ease;
-            user-select: none;
+            user-select: none; /* Standard */
             width: auto;
+        }
 
-            &:hover {
-                background-color: rgba(0,0,0,0.8);
-            }
+        .back {
+            border-radius: 0 5px 5px 0;
+            left: 10px;
         }
 
         .forward {
             border-radius: 4px 0 0 4px;
-            right: 0;
+            right: 10px;
         }
     }
 
@@ -470,39 +498,25 @@ p {
                 }
             }
         }
-
-        .enable,
-        .dot:hover {
-            background-color: #717161;
-        }
     }
 }
 
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.4s;
-    animation-name: fade;
-    animation-duration: 1.4s;
-}
-
-@-webkit-keyframes fade {
-    from {opacity: .5}
-    to {opacity: 2}
-}
-
-@keyframes fade {
-    from {opacity: .5}
-    to {opacity: 2}
-}
-
 .section-content {
-    padding: 0 50px 0 50px;
+    padding: 80px 130px 0 130px;
+
+    .section-title {
+        margin-bottom: 80px;
+    }
 
     .row {
         display: flex;
         flex-direction: row;
         gap: 60px;
         width: 100%;
+
+        &.first-row {
+            margin-bottom: 40px;
+        }
 
         .col-left,
         .col-right {
@@ -514,6 +528,7 @@ p {
 .navigation-button-container {
     display: flex;
     justify-content: space-between;
+    padding: 80px 0;
 
     a {
         color: $color-white;
@@ -528,14 +543,28 @@ p {
 .yellow {
     background-color: $color-yellow;
 
-    .dot-image-container {
-        img {
-            outline: 5px solid $color-yellow-primary;
-            outline-offset: -5px;
+    .image-carousel-container {
+        .image-container {
+            outline: 10px solid $color-yellow-secondary;
+            outline-offset: -10px;
 
-            &.selected {
-                outline: 10px solid $color-yellow-secondary;
-                outline-offset: -10px;
+            .back,
+            .forward {
+                &:hover {
+                    background-color: $color-yellow-secondary;
+                }
+            }
+        }
+
+        .dot-image-container {
+            img {
+                outline: 5px solid $color-yellow-primary;
+                outline-offset: -5px;
+
+                &.selected {
+                    outline: 10px solid $color-yellow-secondary;
+                    outline-offset: -10px;
+                }
             }
         }
     }
@@ -548,14 +577,28 @@ p {
 .light-orange {
     background-color: $color-light-orange;
 
-    .dot-image-container {
-        img {
-            outline: 5px solid $color-light-orange-primary;
-            outline-offset: -5px;
+    .image-carousel-container {
+        .image-container {
+            outline: 10px solid $color-light-orange-secondary;
+            outline-offset: -10px;
 
-            &.selected {
-                outline: 10px solid $color-light-orange-secondary;
-                outline-offset: -10px;
+            .back,
+            .forward {
+                &:hover {
+                    background-color: $color-light-orange-secondary;
+                }
+            }
+        }
+
+        .dot-image-container {
+            img {
+                outline: 5px solid $color-light-orange-primary;
+                outline-offset: -5px;
+
+                &.selected {
+                    outline: 10px solid $color-light-orange-secondary;
+                    outline-offset: -10px;
+                }
             }
         }
     }
@@ -568,14 +611,28 @@ p {
 .orange {
     background-color: $color-orange;
 
-    .dot-image-container {
-        img {
-            outline: 5px solid $color-orange-primary;
-            outline-offset: -5px;
+    .image-carousel-container {
+        .image-container {
+            outline: 10px solid $color-orange-secondary;
+            outline-offset: -10px;
 
-            &.selected {
-                outline: 10px solid $color-orange-secondary;
-                outline-offset: -10px;
+            .back,
+            .forward {
+                &:hover {
+                    background-color: $color-orange-secondary;
+                }
+            }
+        }
+
+        .dot-image-container {
+            img {
+                outline: 5px solid $color-orange-primary;
+                outline-offset: -5px;
+
+                &.selected {
+                    outline: 10px solid $color-orange-secondary;
+                    outline-offset: -10px;
+                }
             }
         }
     }
@@ -588,14 +645,28 @@ p {
 .red {
     background-color: $color-red;
 
-    .dot-image-container {
-        img {
-            outline: 5px solid $color-red-primary;
-            outline-offset: -5px;
+    .image-carousel-container {
+        .image-container {
+            outline: 10px solid $color-red-secondary;
+            outline-offset: -10px;
 
-            &.selected {
-                outline: 10px solid $color-red-secondary;
-                outline-offset: -10px;
+            .back,
+            .forward {
+                &:hover {
+                    background-color: $color-red-secondary;
+                }
+            }
+        }
+
+        .dot-image-container {
+            img {
+                outline: 5px solid $color-red-primary;
+                outline-offset: -5px;
+
+                &.selected {
+                    outline: 10px solid $color-red-secondary;
+                    outline-offset: -10px;
+                }
             }
         }
     }
@@ -608,14 +679,28 @@ p {
 .purple {
     background-color: $color-purple;
 
-    .dot-image-container {
-        img {
-            outline: 5px solid $color-purple-primary;
-            outline-offset: -5px;
+    .image-carousel-container {
+        .image-container {
+            outline: 10px solid $color-purple-secondary;
+            outline-offset: -10px;
 
-            &.selected {
-                outline: 10px solid $color-purple-secondary;
-                outline-offset: -10px;
+            .back,
+            .forward {
+                &:hover {
+                    background-color: $color-purple-secondary;
+                }
+            }
+        }
+
+        .dot-image-container {
+            img {
+                outline: 5px solid $color-purple-primary;
+                outline-offset: -5px;
+
+                &.selected {
+                    outline: 10px solid $color-purple-secondary;
+                    outline-offset: -10px;
+                }
             }
         }
     }
@@ -628,14 +713,28 @@ p {
 .blue {
     background-color: $color-blue;
 
-    .dot-image-container {
-        img {
-            outline: 5px solid $color-blue-primary;
-            outline-offset: -5px;
+    .image-carousel-container {
+        .image-container {
+            outline: 10px solid $color-blue-secondary;
+            outline-offset: -10px;
 
-            &.selected {
-                outline: 10px solid $color-blue-secondary;
-                outline-offset: -10px;
+            .back,
+            .forward {
+                &:hover {
+                    background-color: $color-blue-secondary;
+                }
+            }
+        }
+
+        .dot-image-container {
+            img {
+                outline: 5px solid $color-blue-primary;
+                outline-offset: -5px;
+
+                &.selected {
+                    outline: 10px solid $color-blue-secondary;
+                    outline-offset: -10px;
+                }
             }
         }
     }
@@ -648,14 +747,28 @@ p {
 .dark-blue {
     background-color: $color-dark-blue;
 
-    .dot-image-container {
-        img {
-            outline: 5px solid $color-dark-blue-primary;
-            outline-offset: -5px;
+    .image-carousel-container {
+        .image-container {
+            outline: 10px solid $color-dark-blue-secondary;
+            outline-offset: -10px;
 
-            &.selected {
-                outline: 10px solid $color-dark-blue-secondary;
-                outline-offset: -10px;
+            .back,
+            .forward {
+                &:hover {
+                    background-color: $color-dark-blue-secondary;
+                }
+            }
+        }
+
+        .dot-image-container {
+            img {
+                outline: 5px solid $color-dark-blue-primary;
+                outline-offset: -5px;
+
+                &.selected {
+                    outline: 10px solid $color-dark-blue-secondary;
+                    outline-offset: -10px;
+                }
             }
         }
     }

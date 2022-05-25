@@ -21,11 +21,11 @@
 @endsection
 
 @section('image-4')
-    <img src="{{ url('/images/content/skatlogs/4.jpg') }}" alt="">
+    <img src="{{ url('/images/content/skatlogs/4.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-5')
-    <img src="{{ url('/images/content/skatlogs/5.jpg') }}" alt="">
+    <img src="{{ url('/images/content/skatlogs/5.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-6')
@@ -33,7 +33,7 @@
 @endsection
 
 @section('image-7')
-    <img src="{{ url('/images/content/skatlogs/7.jpg') }}" alt="">
+    <img src="{{ url('/images/content/skatlogs/7.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-8')

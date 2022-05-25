@@ -37,7 +37,7 @@
 @endsection
 
 @section('image-8')
-    <img src="{{ url('/images/content/brauciens/8.jpg') }}" alt="">
+    <img src="{{ url('/images/content/brauciens/8.jpg') }}" class="vertical" alt="">
 @endsection
 
 @section('image-9')

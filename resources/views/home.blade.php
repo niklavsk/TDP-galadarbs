@@ -91,6 +91,14 @@
         </div>
     </div>
 
+    <div class="home-route-map">
+        <h2>Maršruts</h2>
+
+        <div class="map-image-container">
+            <img src="{{ url('/images/content/home/route.svg') }}" alt="">
+        </div>
+    </div>
+
     <div class="accordion-menu">
         <div class="menu-item item-durvis">
             <div class="item-contents">

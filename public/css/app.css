@@ -152,7 +152,9 @@ p {
 .hero-image-container .hero-image-overlay {
   display: inline-block;
   height: 910px;
+  overflow: hidden;
   position: relative;
+  width: 100%;
 }
 .hero-image-container .hero-image-overlay:after {
   background: linear-gradient(to bottom, rgba(29, 32, 48, 0) 30%, rgb(29, 32, 48) 95%);
@@ -182,6 +184,36 @@ p {
 }
 .hero-image-container.home {
   height: 910px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+.hero-image-container.home:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.hero-image-container.home img {
+  height: 910px;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.hero-image-container.home h1 {
+  margin-bottom: 60px;
+}
+
+.home-route-map {
+  margin-bottom: 80px;
+}
+.home-route-map h2 {
+  margin-bottom: 100px;
+}
+.home-route-map .map-image-container {
+  margin: 0 100px;
 }
 
 .accordion-menu {

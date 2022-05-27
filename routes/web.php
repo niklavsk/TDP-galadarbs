@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,34 +14,54 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::redirect('/', '/lv');
 
-Route::get('/pasteiga', function () {
-    return view('pasteiga');
-});
+Route::group(['prefix' => '{language}'], function () {
+    //Localization
 
-Route::get('/gaidisana', function () {
-    return view('gaidisana');
-});
+    Route::get('/language/lv', function () {
+        App::setLocale('lv');
 
-Route::get('/brauciens', function () {
-    return view('brauciens');
-});
+        return redirect()->route('home', app()->getLocale());
+    })->name('languageLv');
 
-Route::get('/skatlogs', function () {
-    return view('skatlogs');
-});
+    Route::get('/language/en', function () {
+        App::setLocale('en');
 
-Route::get('/galastacija', function () {
-    return view('galastacija');
-});
+        return redirect()->route('home', app()->getLocale());
+    })->name('languageEn');
 
-Route::get('/krustojums', function () {
-    return view('krustojums');
-});
+    //Pages
 
-Route::get('/durvis', function () {
-    return view('durvis');
+    Route::get('/', function () {
+        return view('home');
+    })->name('home');
+
+    Route::get('/pasteiga', function () {
+        return view('pasteiga');
+    })->name('pasteiga');
+
+    Route::get('/gaidisana', function () {
+        return view('gaidisana');
+    })->name('gaidisana');
+
+    Route::get('/brauciens', function () {
+        return view('brauciens');
+    })->name('brauciens');
+
+    Route::get('/skatlogs', function () {
+        return view('skatlogs');
+    })->name('skatlogs');
+
+    Route::get('/galastacija', function () {
+        return view('galastacija');
+    })->name('galastacija');
+
+    Route::get('/krustojums', function () {
+        return view('krustojums');
+    })->name('krustojums');
+
+    Route::get('/durvis', function () {
+        return view('durvis');
+    })->name('durvis');
 });

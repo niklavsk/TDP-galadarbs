@@ -206,13 +206,13 @@
                 </div>
 
                 <div class="col-right">
-                    <h4>Par nosaukumu</h4>
+                    <h4>{{ __('content.title-par-nosaukumu') }}</h4>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-left">
-                    <h4 class="text-right">Vairāk par vietu</h4>
+                    <h4 class="text-right">{{ __('content.title-vairak-par-vietu') }}</h4>
                 </div>
 
                 <div class="col-right">

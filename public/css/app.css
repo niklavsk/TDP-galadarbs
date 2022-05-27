@@ -123,14 +123,17 @@ p {
   padding: 0;
 }
 .topnav .language-links-container ul li {
-  color: #B3B3B3;
   float: left;
+}
+.topnav .language-links-container ul li a {
+  color: #B3B3B3;
   font-size: 30px;
   font-style: italic;
   font-weight: 900;
-  padding: 0 18px;
+  margin: 0 18px;
+  text-decoration: none;
 }
-.topnav .language-links-container ul li.active {
+.topnav .language-links-container ul li.active a {
   color: white;
 }
 

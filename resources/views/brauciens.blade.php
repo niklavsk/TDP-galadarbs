@@ -45,7 +45,7 @@
 @endsection
 
 @section('title')
-    Brauciens
+    {{ __('content.text-title-brauciens') }}
 @endsection
 
 @section('about-name')
@@ -59,9 +59,9 @@
 @endsection
 
 @section('button-previous')
-    <a href="{{ url('/gaidisana') }}"><h5><span class="prev-icon"><</span> Gaidīšana</h5></a>
+    <a href="{{ route('gaidisana', app()->getLocale()) }}"><h5><span class="prev-icon"><</span> {{ __('content.text-title-gaidisana') }}</h5></a>
 @endsection
 
 @section('button-next')
-    <a href="{{ url('/skatlogs') }}"><h5>Skatlogs <span class="next-icon">></span></h5></a>
+    <a href="{{ route('skatlogs', app()->getLocale()) }}"><h5>{{ __('content.text-title-skatlogs') }} <span class="next-icon">></span></h5></a>
 @endsection

@@ -45,7 +45,7 @@
 @endsection
 
 @section('title')
-    Durvis
+    {{ __('content.text-title-durvis') }}
 @endsection
 
 @section('about-name')
@@ -61,5 +61,5 @@
 @endsection
 
 @section('button-previous')
-    <a href="{{ url('/krustojums') }}"><h5><span class="prev-icon"><</span> Krustojums</h5></a>
+    <a href="{{ route('krustojums', app()->getLocale()) }}"><h5><span class="prev-icon"><</span> {{ __('content.text-title-krustojums') }}</h5></a>
 @endsection

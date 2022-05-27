@@ -166,15 +166,21 @@ p {
             padding: 0;
 
             li {
-                color: #B3B3B3;
                 float: left;
-                font-size: 30px;
-                font-style: italic;
-                font-weight: 900;
-                padding: 0 18px;
+
+                a {
+                    color: #B3B3B3;
+                    font-size: 30px;
+                    font-style: italic;
+                    font-weight: 900;
+                    margin: 0 18px;
+                    text-decoration: none;
+                }
 
                 &.active {
-                    color: white;
+                    a {
+                        color: white;
+                    }
                 }
             }
         }

@@ -82,17 +82,17 @@
             <img src="{{ url('/images/content/home/hero.jpg') }}" alt="">
 
             <div class="hero-image-title">
-                <h1>Mans ceļš<br>uz universitāti</h1>
+                <h1>{{ __('content.title-mans-cels-uz-universitati-1') }}<br>{{ __('content.title-mans-cels-uz-universitati-2') }}</h1>
 
                 <div class="button-container">
-                    <button id="button-sections" class="button-white">Apskatīt sadaļas</button>
+                    <button id="button-sections" class="button-white">{{ __('content.button-apskatit-sadalas') }}</button>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="home-route-map">
-        <h2>Maršruts</h2>
+        <h2>{{ __('content.title-marsruts') }}</h2>
 
         <div class="map-image-container">
             <img src="{{ url('/images/content/home/route.svg') }}" alt="">
@@ -103,18 +103,18 @@
         <div class="menu-item item-durvis">
             <div class="item-contents">
                 <div class="col-left">
-                    <h3>Durvis</h3>
+                    <h3>{{ __('content.text-title-durvis') }}</h3>
                 </div>
 
                 <div class="col-right">
                     <div class="text-container">
                         <h6>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+                            {{ __('content.text-name-durvis-short') }}
                         </h6>
                     </div>
 
                     <div class="button-container">
-                        <a href="{{ url('/durvis') }}" class="button-white">Lasīt vairāk</a>
+                        <a href="{{ route('durvis', app()->getLocale()) }}" class="button-white">{{ __('content.button-lasit-vairak') }}</a>
                     </div>
                 </div>
             </div>
@@ -123,18 +123,18 @@
         <div class="menu-item item-krustojums">
             <div class="item-contents">
                 <div class="col-left">
-                    <h3>Krustojums</h3>
+                    <h3>{{ __('content.text-title-krustojums') }}</h3>
                 </div>
 
                 <div class="col-right">
                     <div class="text-container">
                         <h6>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+                            {{ __('content.text-name-krustojums-short') }}
                         </h6>
                     </div>
 
                     <div class="button-container">
-                        <a href="{{ url('/krustojums') }}" class="button-white">Lasīt vairāk</a>
+                        <a href="{{ route('krustojums', app()->getLocale()) }}" class="button-white">{{ __('content.button-lasit-vairak') }}</a>
                     </div>
                 </div>
             </div>
@@ -143,18 +143,18 @@
         <div class="menu-item item-galastacija">
             <div class="item-contents">
                 <div class="col-left">
-                    <h3>Gala<br>stacija</h3>
+                    <h3>{{ __('content.text-title-galastacija-1') }}<br>{{ __('content.text-title-galastacija-2') }}</h3>
                 </div>
 
                 <div class="col-right">
                     <div class="text-container">
                         <h6>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+                            {{ __('content.text-name-galastacija-short') }}
                         </h6>
                     </div>
 
                     <div class="button-container">
-                        <a href="{{ url('/galastacija') }}" class="button-white">Lasīt vairāk</a>
+                        <a href="{{ route('galastacija', app()->getLocale()) }}" class="button-white">{{ __('content.button-lasit-vairak') }}</a>
                     </div>
                 </div>
             </div>
@@ -163,18 +163,18 @@
         <div class="menu-item item-skatlogs">
             <div class="item-contents">
                 <div class="col-left">
-                    <h3>Skatlogs</h3>
+                    <h3>{{ __('content.text-title-skatlogs') }}</h3>
                 </div>
 
                 <div class="col-right">
                     <div class="text-container">
                         <h6>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+                            {{ __('content.text-name-skatlogs-short') }}
                         </h6>
                     </div>
 
                     <div class="button-container">
-                        <a href="{{ url('/skatlogs') }}" class="button-white">Lasīt vairāk</a>
+                        <a href="{{ route('skatlogs', app()->getLocale()) }}" class="button-white">{{ __('content.button-lasit-vairak') }}</a>
                     </div>
                 </div>
             </div>
@@ -183,18 +183,18 @@
         <div class="menu-item item-brauciens">
             <div class="item-contents">
                 <div class="col-left">
-                    <h3>Brauciens</h3>
+                    <h3>{{ __('content.text-title-brauciens') }}</h3>
                 </div>
 
                 <div class="col-right">
                     <div class="text-container">
                         <h6>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+                            {{ __('content.text-name-brauciens-short') }}
                         </h6>
                     </div>
 
                     <div class="button-container">
-                        <a href="{{ url('/brauciens') }}" class="button-white">Lasīt vairāk</a>
+                        <a href="{{ route('brauciens', app()->getLocale()) }}" class="button-white">{{ __('content.button-lasit-vairak') }}</a>
                     </div>
                 </div>
             </div>
@@ -203,18 +203,18 @@
         <div class="menu-item item-gaidisana">
             <div class="item-contents">
                 <div class="col-left">
-                    <h3>Gaidīšana</h3>
+                    <h3>{{ __('content.text-title-gaidisana') }}</h3>
                 </div>
 
                 <div class="col-right">
                     <div class="text-container">
                         <h6>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+                            {{ __('content.text-name-gaidisana-short') }}
                         </h6>
                     </div>
 
                     <div class="button-container">
-                        <a href="{{ url('/gaidisana') }}" class="button-white">Lasīt vairāk</a>
+                        <a href="{{ route('gaidisana', app()->getLocale()) }}" class="button-white">{{ __('content.button-lasit-vairak') }}</a>
                     </div>
                 </div>
             </div>
@@ -223,18 +223,18 @@
         <div class="menu-item item-pasteiga active">
             <div class="item-contents">
                 <div class="col-left">
-                    <h3>Pasteiga</h3>
+                    <h3>{{ __('content.text-title-pasteiga') }}</h3>
                 </div>
 
                 <div class="col-right">
                     <div class="text-container">
                         <h6>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+                            {{ __('content.text-name-pasteiga-short') }}
                         </h6>
                     </div>
 
                     <div class="button-container">
-                        <a href="{{ url('/pasteiga') }}" class="button-white">Lasīt vairāk</a>
+                        <a href="{{ route('pasteiga', app()->getLocale()) }}" class="button-white">{{ __('content.button-lasit-vairak') }}</a>
                     </div>
                 </div>
             </div>

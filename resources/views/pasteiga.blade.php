@@ -45,7 +45,7 @@
 @endsection
 
 @section('title')
-    Pasteiga
+    {{ __('content.text-title-pasteiga') }}
 @endsection
 
 @section('about-name')
@@ -61,5 +61,5 @@
 @endsection
 
 @section('button-next')
-    <a href="{{ url('/gaidisana') }}"><h5>Gaidīšana <span class="next-icon">></span></h5></a>
+    <a href="{{ route('gaidisana', app()->getLocale()) }}"><h5>{{ __('content.text-title-gaidisana') }} <span class="next-icon">></span></h5></a>
 @endsection

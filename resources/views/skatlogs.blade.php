@@ -45,7 +45,7 @@
 @endsection
 
 @section('title')
-    Skatlogs
+    {{ __('content.text-title-skatlogs') }}
 @endsection
 
 @section('about-name')
@@ -61,9 +61,9 @@
 @endsection
 
 @section('button-previous')
-    <a href="{{ url('/brauciens') }}"><h5><span class="prev-icon"><</span> Brauciens</h5></a>
+    <a href="{{ route('brauciens', app()->getLocale()) }}"><h5><span class="prev-icon"><</span> {{ __('content.text-title-brauciens') }}</h5></a>
 @endsection
 
 @section('button-next')
-    <a href="{{ url('/galastacija') }}"><h5>Gala stacija <span class="next-icon">></span></h5></a>
+    <a href="{{ route('galastacija', app()->getLocale()) }}"><h5>{{ __('content.text-title-galastacija-1') }} {{ __('content.text-title-galastacija-2') }} <span class="next-icon">></span></h5></a>
 @endsection

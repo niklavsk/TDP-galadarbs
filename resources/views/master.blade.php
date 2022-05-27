@@ -13,15 +13,25 @@
         <div class="content">
             <nav class="topnav">
                 <div class="logo-container">
-                    <a href="{{ url('/') }}">
+                    <a href="{{ route('home', app()->getLocale()) }}">
                         <img src="{{ url('/images/logo.png') }}" alt="">
                     </a>
                 </div>
 
                 <div class="language-links-container">
                     <ul class="language-links">
-                        <li class="active">LV</li>
-                        <li>EN</li>
+                        <li
+                            @if(app()->getLocale() == 'lv')
+                                class="active"
+                            @endif
+                        >
+                            <a href="{{ route('languageLv', app()->getLocale()) }}">LV</a></li>
+                        <li
+                            @if(app()->getLocale() == 'en')
+                                class="active"
+                            @endif
+                        >
+                            <a href="{{ route('languageEn', app()->getLocale()) }}">EN</a></li>
                     </ul>
                 </div>
             </nav>

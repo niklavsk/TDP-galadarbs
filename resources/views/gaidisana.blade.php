@@ -45,7 +45,7 @@
 @endsection
 
 @section('title')
-    Gaidīšana
+    {{ __('content.text-title-gaidisana') }}
 @endsection
 
 @section('about-name')
@@ -59,9 +59,9 @@
 @endsection
 
 @section('button-previous')
-    <a href="{{ url('/pasteiga') }}"><h5><span class="prev-icon"><</span> Pasteiga</h5></a>
+    <a href="{{ route('pasteiga', app()->getLocale()) }}"><h5><span class="prev-icon"><</span> {{ __('content.text-title-pasteiga') }}</h5></a>
 @endsection
 
 @section('button-next')
-    <a href="{{ url('/brauciens') }}"><h5>Brauciens <span class="next-icon">></span></h5></a>
+    <a href="{{ route('brauciens', app()->getLocale()) }}"><h5>{{ __('content.text-title-brauciens') }} <span class="next-icon">></span></h5></a>
 @endsection

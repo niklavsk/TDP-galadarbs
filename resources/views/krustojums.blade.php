@@ -45,7 +45,7 @@
 @endsection
 
 @section('title')
-    Krustojums
+    {{ __('content.text-title-krustojums') }}
 @endsection
 
 @section('about-name')
@@ -61,9 +61,9 @@
 @endsection
 
 @section('button-previous')
-    <a href="{{ url('/galastacija') }}"><h5><span class="prev-icon"><</span> Gala stacija</h5></a>
+    <a href="{{ route('galastacija', app()->getLocale()) }}"><h5><span class="prev-icon"><</span> {{ __('content.text-title-galastacija-1') }} {{ __('content.text-title-galastacija-2') }}</h5></a>
 @endsection
 
 @section('button-next')
-    <a href="{{ url('/durvis') }}"><h5>Durvis <span class="next-icon">></span></h5></a>
+    <a href="{{ route('durvis', app()->getLocale()) }}"><h5>{{ __('content.text-title-durvis') }} <span class="next-icon">></span></h5></a>
 @endsection

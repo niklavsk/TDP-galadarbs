@@ -298,11 +298,11 @@ p {
 }
 .home-route-map .map-image-container {
   margin: auto;
-  width: 70%;
+  width: 60%;
 }
 @media screen and (max-width: 900px) {
   .home-route-map .map-image-container {
-    width: 80%;
+    width: 70%;
   }
 }
 @media screen and (max-width: 630px) {
@@ -345,8 +345,8 @@ p {
 }
 @media screen and (max-width: 630px) {
   .accordion-menu .menu-item .item-contents {
-    left: 0;
-    width: 100%;
+    left: 25px;
+    width: calc(100% - 25px);
   }
 }
 @media screen and (max-width: 630px) {

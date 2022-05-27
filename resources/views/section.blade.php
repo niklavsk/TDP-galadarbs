@@ -94,102 +94,102 @@
     </div>
 
     <div class="image-carousel-container">
-            <div class="image-container">
-                <div class="image-wrapper" id="image-1">
+        <div class="image-container">
+            <div class="image-wrapper" id="image-1">
+                @yield('image-1')
+            </div>
+
+            <div class="image-wrapper" id="image-2">
+                @yield('image-2')
+            </div>
+
+            <div class="image-wrapper" id="image-3">
+                @yield('image-3')
+            </div>
+
+            <div class="image-wrapper" id="image-4">
+                @yield('image-4')
+            </div>
+
+            <div class="image-wrapper" id="image-5">
+                @yield('image-5')
+            </div>
+
+            <div class="image-wrapper" id="image-6">
+                @yield('image-6')
+            </div>
+
+            <div class="image-wrapper" id="image-7">
+                @yield('image-7')
+            </div>
+
+            <div class="image-wrapper" id="image-8">
+                @yield('image-8')
+            </div>
+
+            <div class="image-wrapper" id="image-9">
+                @yield('image-9')
+            </div>
+
+            <a class="back" onclick="moveSlides(-1)">&#10094;</a>
+            <a class="forward" onclick="moveSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="image-carousel-dots">
+            <div class="dot" id="image-thumbnail-1">
+                <div class="dot-image-container">
                     @yield('image-1')
                 </div>
+            </div>
 
-                <div class="image-wrapper" id="image-2">
+            <div class="dot" id="image-thumbnail-2">
+                <div class="dot-image-container">
                     @yield('image-2')
                 </div>
+            </div>
 
-                <div class="image-wrapper" id="image-3">
+            <div class="dot" id="image-thumbnail-3">
+                <div class="dot-image-container">
                     @yield('image-3')
                 </div>
+            </div>
 
-                <div class="image-wrapper" id="image-4">
+            <div class="dot" id="image-thumbnail-4">
+                <div class="dot-image-container">
                     @yield('image-4')
                 </div>
+            </div>
 
-                <div class="image-wrapper" id="image-5">
+            <div class="dot" id="image-thumbnail-5">
+                <div class="dot-image-container">
                     @yield('image-5')
                 </div>
+            </div>
 
-                <div class="image-wrapper" id="image-6">
+            <div class="dot" id="image-thumbnail-6">
+                <div class="dot-image-container">
                     @yield('image-6')
                 </div>
+            </div>
 
-                <div class="image-wrapper" id="image-7">
+            <div class="dot" id="image-thumbnail-7">
+                <div class="dot-image-container">
                     @yield('image-7')
                 </div>
+            </div>
 
-                <div class="image-wrapper" id="image-8">
+            <div class="dot" id="image-thumbnail-8">
+                <div class="dot-image-container">
                     @yield('image-8')
                 </div>
+            </div>
 
-                <div class="image-wrapper" id="image-9">
+            <div class="dot" id="image-thumbnail-9">
+                <div class="dot-image-container">
                     @yield('image-9')
                 </div>
-
-                <a class="back" onclick="moveSlides(-1)">&#10094;</a>
-                <a class="forward" onclick="moveSlides(1)">&#10095;</a>
             </div>
-
-            <div class="image-carousel-dots">
-                <div class="dot" id="image-thumbnail-1">
-                    <div class="dot-image-container">
-                        @yield('image-1')
-                    </div>
-                </div>
-
-                <div class="dot" id="image-thumbnail-2">
-                    <div class="dot-image-container">
-                        @yield('image-2')
-                    </div>
-                </div>
-
-                <div class="dot" id="image-thumbnail-3">
-                    <div class="dot-image-container">
-                        @yield('image-3')
-                    </div>
-                </div>
-
-                <div class="dot" id="image-thumbnail-4">
-                    <div class="dot-image-container">
-                        @yield('image-4')
-                    </div>
-                </div>
-
-                <div class="dot" id="image-thumbnail-5">
-                    <div class="dot-image-container">
-                        @yield('image-5')
-                    </div>
-                </div>
-
-                <div class="dot" id="image-thumbnail-6">
-                    <div class="dot-image-container">
-                        @yield('image-6')
-                    </div>
-                </div>
-
-                <div class="dot" id="image-thumbnail-7">
-                    <div class="dot-image-container">
-                        @yield('image-7')
-                    </div>
-                </div>
-
-                <div class="dot" id="image-thumbnail-8">
-                    <div class="dot-image-container">
-                        @yield('image-8')
-                    </div>
-                </div>
-
-                <div class="dot" id="image-thumbnail-9">
-                    <div class="dot-image-container">
-                        @yield('image-9')
-                    </div>
-                </div>
-            </div>
+        </div>
     </div>
 
     <div class="section-content">

@@ -354,10 +354,10 @@ p {
 
     .map-image-container {
         margin: auto;
-        width: 70%;
+        width: 60%;
 
         @media screen and (max-width: $size-medium-tablet) {
-            width: 80%;
+            width: 70%;
         }
 
         @media screen and (max-width: $size-small-tablet) {
@@ -396,8 +396,8 @@ p {
             }
 
             @media screen and (max-width: $size-small-tablet) {
-                left: 0;
-                width: 100%;
+                left: 25px;
+                width: calc(100% - 25px);
             }
 
             .col-left {

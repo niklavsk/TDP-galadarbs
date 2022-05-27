@@ -33,7 +33,15 @@ $accordion-menu-space: 65px;
 $accordion-menu-background-position: 10px 12px;
 $accordion-menu-border-radius: 54px 0 0 0;
 
-$image-carousel-container-height: 910px;
+$image-carousel-container-height: 800px;
+$image-carousel-container-height-smaller: 710px;
+
+$size-medium-desktop: 1300px;
+$size-small-desktop: 1230px;
+$size-large-tablet: 1000px;
+$size-medium-tablet: 900px;
+$size-small-tablet: 630px;
+$size-medium-mobile: 500px;
 
 body, html {
     color: $color-white;
@@ -72,6 +80,16 @@ h1 {
     margin: 0;
     padding: 0;
     text-align: center;
+
+    @media screen and (max-width: $size-medium-tablet) {
+        font-size: 70px;
+        line-height: 80px;
+    }
+
+    @media screen and (max-width: $size-small-tablet) {
+        font-size: 50px;
+        line-height: 60px;
+    }
 }
 
 h2 {
@@ -82,6 +100,16 @@ h2 {
     padding: 0;
     text-align: center;
     text-transform: uppercase;
+
+    @media screen and (max-width: $size-medium-tablet) {
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    @media screen and (max-width: $size-small-tablet) {
+        font-size: 40px;
+        line-height: 60px;
+    }
 }
 
 h3 {
@@ -93,6 +121,11 @@ h3 {
     padding: 0;
     text-align: center;
     text-transform: uppercase;
+
+    @media screen and (max-width: $size-medium-tablet) {
+        font-size: 30px;
+        line-height: 35px;
+    }
 }
 
 h4 {
@@ -102,6 +135,10 @@ h4 {
     line-height: 26px;
     margin: 0;
     padding: 0;
+
+    @media screen and (max-width: $size-medium-tablet) {
+        font-size: 30px;
+    }
 }
 
 h5 {
@@ -111,6 +148,10 @@ h5 {
     margin: 0;
     padding: 0;
     text-transform: uppercase;
+
+    @media screen and (max-width: $size-medium-tablet) {
+        font-size: 30px;
+    }
 }
 
 h6 {
@@ -119,20 +160,36 @@ h6 {
     line-height: 22px;
     margin: 0;
     padding: 0;
+    text-align: justify;
+
+    @media screen and (max-width: $size-medium-tablet) {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+    }
 }
 
 p {
     font-size: 20px;
-    font-weight: bold;
-    line-height: 26px;
+    font-weight: 500;
+    line-height: 28px;
     margin: 0;
     padding: 0;
     text-align: justify;
+
+    @media screen and (max-width: $size-medium-tablet) {
+        font-size: 17px;
+        line-height: 24px;
+    }
 }
 
 .prev-icon,
 .next-icon {
     font-size: 45px;
+
+    @media screen and (max-width: $size-medium-tablet) {
+        font-size: 35px;
+    }
 }
 
 .text-right {
@@ -160,6 +217,10 @@ p {
         right: 100px;
         top: 24px;
 
+        @media screen and (max-width: $size-medium-tablet) {
+            right: 25px;
+        }
+
         ul {
             list-style-type: none;
             margin: 0;
@@ -173,11 +234,15 @@ p {
                     font-size: 30px;
                     font-style: italic;
                     font-weight: 900;
-                    margin: 0 18px;
+                    margin: 0 25px;
                     text-decoration: none;
                 }
 
                 &.active {
+                    @media screen and (max-width: $size-medium-tablet) {
+                        display: none;
+                    }
+
                     a {
                         color: white;
                     }
@@ -198,6 +263,11 @@ p {
     font-weight: 900;
     padding: 15px;
     text-decoration: none;
+
+    @media screen and (max-width: $size-medium-tablet) {
+        font-size: 13px;
+        font-weight: 700;
+    }
 }
 
 // Hero images
@@ -273,10 +343,23 @@ p {
 
     h2 {
         margin-bottom: 100px;
+
+        @media screen and (max-width: $size-small-tablet) {
+            margin-bottom: 60px;
+        }
     }
 
     .map-image-container {
-        margin: 0 100px;
+        margin: auto;
+        width: 70%;
+
+        @media screen and (max-width: $size-medium-tablet) {
+            width: 80%;
+        }
+
+        @media screen and (max-width: $size-small-tablet) {
+            width: 95%;
+        }
     }
 }
 
@@ -303,11 +386,40 @@ p {
             top: 80px;
             width: fit-content;
 
+            @media screen and (max-width: $size-medium-tablet) {
+                gap: 40px;
+                left: 60px;
+                top: 80px;
+            }
+
+            @media screen and (max-width: $size-small-tablet) {
+                left: 0;
+                width: 100%;
+            }
+
+            .col-left {
+                @media screen and (max-width: $size-small-tablet) {
+                    display: none;
+                }
+            }
+
             .col-right {
                 width: 400px;
 
+                @media screen and (max-width: $size-medium-tablet) {
+                    width: 300px;
+                }
+
+                @media screen and (max-width: $size-small-tablet) {
+                    margin: auto;
+                }
+
                 .button-container {
                     margin-top: 45px;
+
+                    @media screen and (max-width: $size-small-tablet) {
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -337,7 +449,7 @@ p {
             height: calc(750px - $accordion-menu-space);
             left: $accordion-menu-space;
 
-            @media screen and (max-width: 1230px) {
+            @media screen and (max-width: $size-small-desktop) {
                 left: 0;
             }
 
@@ -356,7 +468,7 @@ p {
             height: calc(750px - 2 * $accordion-menu-space);
             left: 2 * $accordion-menu-space;
 
-            @media screen and (max-width: 1230px) {
+            @media screen and (max-width: $size-small-desktop) {
                 left: 0;
             }
 
@@ -375,7 +487,7 @@ p {
             height: calc(750px - 3 * $accordion-menu-space);
             left: 3 * $accordion-menu-space;
 
-            @media screen and (max-width: 1230px) {
+            @media screen and (max-width: $size-small-desktop) {
                 left: 0;
             }
 
@@ -394,7 +506,7 @@ p {
             height: calc(750px - 4 * $accordion-menu-space);
             left: 4 * $accordion-menu-space;
 
-            @media screen and (max-width: 1230px) {
+            @media screen and (max-width: $size-small-desktop) {
                 left: 0;
             }
 
@@ -413,7 +525,7 @@ p {
             height: calc(750px - 5 * $accordion-menu-space);
             left: 5 * $accordion-menu-space;
 
-            @media screen and (max-width: 1230px) {
+            @media screen and (max-width: $size-small-desktop) {
                 left: 0;
             }
 
@@ -432,7 +544,7 @@ p {
             height: calc(750px - 6 * $accordion-menu-space);
             left: 6 * $accordion-menu-space;
 
-            @media screen and (max-width: 1230px) {
+            @media screen and (max-width: $size-small-desktop) {
                 left: 0;
             }
 
@@ -447,7 +559,19 @@ p {
 
 // Section page
 .image-carousel-container {
-    margin: 80px 80px 0 80px;
+    margin: 80px 6% 0 6%;
+
+    @media screen and (max-width: $size-small-desktop) {
+        margin: 80px 3% 0 3%;
+    }
+
+    @media screen and (max-width: $size-medium-tablet) {
+        margin: 40px 3% 0 3%;
+    }
+
+    @media screen and (max-width: $size-small-tablet) {
+        margin: 40px 0 0 0;
+    }
 
     .image-container {
         background-color: rgba(255,255,255,0.5);
@@ -456,6 +580,20 @@ p {
         margin-bottom: 60px;
         overflow: hidden;
         position: relative;
+
+        @media screen and (max-width: $size-small-desktop) {
+            height: $image-carousel-container-height-smaller;
+        }
+
+        @media screen and (max-width: $size-large-tablet) {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: $size-large-tablet) {
+            aspect-ratio: 16 / 10;
+            height: unset;
+            width: 100%;
+        }
 
         &:after {
             content: "";
@@ -477,6 +615,14 @@ p {
                 position: absolute;
                 top: 10px;
                 width: calc(100% - 20px);
+
+                @media screen and (max-width: $size-small-desktop) {
+                    height: calc($image-carousel-container-height-smaller - 20px);
+                }
+
+                @media screen and (max-width: $size-large-tablet) {
+                    height: calc(100% - 20px);
+                }
 
                 &.vertical {
                     object-fit: contain;
@@ -517,6 +663,10 @@ p {
         display: flex;
         justify-content: space-between;
 
+        @media screen and (max-width: $size-large-tablet) {
+            display: none;
+        }
+
         .dot {
             cursor: pointer;
 
@@ -524,6 +674,10 @@ p {
                 aspect-ratio: 1 / 1;
                 position: relative;
                 width: 120px;
+
+                @media screen and (max-width: $size-medium-desktop) {
+                    width: 100px;
+                }
 
                 &:after {
                     content: "";
@@ -544,10 +698,22 @@ p {
 }
 
 .section-content {
-    padding: 80px 130px 0 130px;
+    padding: 80px 11% 0 11%;
+
+    @media screen and (max-width: $size-small-desktop) {
+        padding: 80px 5% 0 5%;
+    }
+
+    @media screen and (max-width: $size-medium-tablet) {
+        padding: 40px 5% 0 5%;
+    }
 
     .section-title {
         margin-bottom: 80px;
+
+        @media screen and (max-width: $size-medium-tablet) {
+            margin-bottom: 40px;
+        }
     }
 
     .row {
@@ -556,13 +722,28 @@ p {
         gap: 60px;
         width: 100%;
 
+        @media screen and (max-width: $size-small-tablet) {
+            flex-direction: column;
+            gap: 30px;
+        }
+
         &.first-row {
             margin-bottom: 40px;
+
+            @media screen and (max-width: $size-small-tablet) {
+                flex-direction: column-reverse;
+                margin-bottom: 20px;
+            }
         }
 
         .col-left,
         .col-right {
             width: 50%;
+
+            @media screen and (max-width: $size-small-tablet) {
+                margin: auto;
+                width: 80%;
+            }
         }
     }
 }
@@ -571,6 +752,16 @@ p {
     display: flex;
     justify-content: space-between;
     padding: 80px 0;
+
+    @media screen and (max-width: $size-medium-tablet) {
+        padding: 40px 0;
+    }
+
+    @media screen and (max-width: $size-medium-mobile) {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
 
     a {
         color: $color-white;

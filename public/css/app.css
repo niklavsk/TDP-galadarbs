@@ -7,7 +7,7 @@ body, html {
 }
 
 body:after {
-  content: url("/images/menu/durvis_active.svg") url("/images/menu/krustojums_active.svg") url("/images/menu/gala stacija_active.svg") url("/images/menu/skatlogs_active.svg") url("/images/menu/brauciens_active.svg") url("/images/menu/gaidisana_active.svg") url("/images/menu/pasteiga.svg");
+  content: url("/images/menu/durvis_active.svg") url("/images/menu/krustojums_active.svg") url("/images/menu/gala stacija_active.svg") url("/images/menu/skatlogs_active.svg") url("/images/menu/brauciens_active.svg") url("/images/menu/gaidisana_active.svg") url("/images/menu/pasteiga.svg") url("/images/menu/durvis_en_active.svg") url("/images/menu/krustojums_en_active.svg") url("/images/menu/gala stacija_en_active.svg") url("/images/menu/skatlogs_en_active.svg") url("/images/menu/brauciens_en_active.svg") url("/images/menu/gaidisana_en_active.svg") url("/images/menu/pasteiga_en.svg");
   height: 0;
   overflow: hidden;
   position: absolute;
@@ -496,6 +496,76 @@ p {
   background: #CEA90D url("/images/menu/pasteiga_active.svg") no-repeat 10px 12px;
   background-origin: content-box;
   background-size: 1500px auto;
+}
+.accordion-menu.en .menu-item.item-durvis {
+  background: #1D2030 url("/images/menu/durvis_en.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
+}
+.accordion-menu.en .menu-item.item-durvis.active {
+  background: #1D2030 url("/images/menu/durvis_en_active.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
+}
+.accordion-menu.en .menu-item.item-krustojums {
+  background: #1F247C url("/images/menu/krustojums_en.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
+}
+.accordion-menu.en .menu-item.item-krustojums.active {
+  background: #1F247C url("/images/menu/krustojums_en_active.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
+}
+.accordion-menu.en .menu-item.item-galastacija {
+  background: #511260 url("/images/menu/gala stacija_en.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
+}
+.accordion-menu.en .menu-item.item-galastacija.active {
+  background: #511260 url("/images/menu/gala stacija_en_active.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
+}
+.accordion-menu.en .menu-item.item-skatlogs {
+  background: #B72538 url("/images/menu/skatlogs_en.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
+}
+.accordion-menu.en .menu-item.item-skatlogs.active {
+  background: #B72538 url("/images/menu/skatlogs_en_active.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
+}
+.accordion-menu.en .menu-item.item-brauciens {
+  background: #C4451A url("/images/menu/brauciens_en.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
+}
+.accordion-menu.en .menu-item.item-brauciens.active {
+  background: #C4451A url("/images/menu/brauciens_en_active.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
+}
+.accordion-menu.en .menu-item.item-gaidisana {
+  background: #D48502 url("/images/menu/gaidisana_en.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
+}
+.accordion-menu.en .menu-item.item-gaidisana.active {
+  background: #D48502 url("/images/menu/gaidisana_en_active.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
+}
+.accordion-menu.en .menu-item.item-pasteiga {
+  background: #CEA90D url("/images/menu/pasteiga_en.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
+}
+.accordion-menu.en .menu-item.item-pasteiga.active {
+  background: #CEA90D url("/images/menu/pasteiga_en_active.svg") no-repeat 10px 12px;
+  background-origin: content-box;
+  background-size: 2100px auto;
 }
 
 .image-carousel-container {

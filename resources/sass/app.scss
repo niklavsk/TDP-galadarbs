@@ -55,7 +55,10 @@ body:after{
     content: url("/images/menu/durvis_active.svg") url("/images/menu/krustojums_active.svg")
     url("/images/menu/gala stacija_active.svg") url("/images/menu/skatlogs_active.svg")
     url("/images/menu/brauciens_active.svg") url("/images/menu/gaidisana_active.svg")
-    url("/images/menu/pasteiga.svg");
+    url("/images/menu/pasteiga.svg") url("/images/menu/durvis_en_active.svg") url("/images/menu/krustojums_en_active.svg")
+    url("/images/menu/gala stacija_en_active.svg") url("/images/menu/skatlogs_en_active.svg")
+    url("/images/menu/brauciens_en_active.svg") url("/images/menu/gaidisana_en_active.svg")
+    url("/images/menu/pasteiga_en.svg");
     height: 0;
     overflow: hidden;
     position: absolute;
@@ -552,6 +555,94 @@ p {
                 background: $color-yellow url("/images/menu/pasteiga_active.svg") no-repeat $accordion-menu-background-position;
                 background-origin: content-box;
                 background-size: 1500px auto;
+            }
+        }
+    }
+
+    &.en {
+        .menu-item {
+            &.item-durvis {
+                background: $color-dark-blue url("/images/menu/durvis_en.svg") no-repeat $accordion-menu-background-position;
+                background-origin: content-box;
+                background-size: 2100px auto;
+
+                &.active {
+                    background: $color-dark-blue url("/images/menu/durvis_en_active.svg") no-repeat $accordion-menu-background-position;
+                    background-origin: content-box;
+                    background-size: 2100px auto;
+                }
+            }
+
+            &.item-krustojums {
+                background: $color-blue url("/images/menu/krustojums_en.svg") no-repeat $accordion-menu-background-position;
+                background-origin: content-box;
+                background-size: 2100px auto;
+
+                &.active {
+                    background: $color-blue url("/images/menu/krustojums_en_active.svg") no-repeat $accordion-menu-background-position;
+                    background-origin: content-box;
+                    background-size: 2100px auto;
+                }
+            }
+
+            &.item-galastacija {
+                background: $color-purple url("/images/menu/gala stacija_en.svg") no-repeat $accordion-menu-background-position;
+                background-origin: content-box;
+                background-size: 2100px auto;
+
+                &.active {
+                    background: $color-purple url("/images/menu/gala stacija_en_active.svg") no-repeat $accordion-menu-background-position;
+                    background-origin: content-box;
+                    background-size: 2100px auto;
+                }
+            }
+
+            &.item-skatlogs {
+                background: $color-red url("/images/menu/skatlogs_en.svg") no-repeat $accordion-menu-background-position;
+                background-origin: content-box;
+                background-size: 2100px auto;
+
+                &.active {
+                    background: $color-red url("/images/menu/skatlogs_en_active.svg") no-repeat $accordion-menu-background-position;
+                    background-origin: content-box;
+                    background-size: 2100px auto;
+                }
+            }
+
+            &.item-brauciens {
+                background: $color-orange url("/images/menu/brauciens_en.svg") no-repeat $accordion-menu-background-position;
+                background-origin: content-box;
+                background-size: 2100px auto;
+
+                &.active {
+                    background: $color-orange url("/images/menu/brauciens_en_active.svg") no-repeat $accordion-menu-background-position;
+                    background-origin: content-box;
+                    background-size: 2100px auto;
+                }
+            }
+
+            &.item-gaidisana {
+                background: $color-light-orange url("/images/menu/gaidisana_en.svg") no-repeat $accordion-menu-background-position;
+                background-origin: content-box;
+                background-size: 2100px auto;
+
+                &.active {
+                    background: $color-light-orange url("/images/menu/gaidisana_en_active.svg") no-repeat $accordion-menu-background-position;
+                    background-origin: content-box;
+                    background-size: 2100px auto;
+                }
+            }
+
+            &.item-pasteiga {
+                background: $color-yellow url("/images/menu/pasteiga_en.svg") no-repeat $accordion-menu-background-position;
+                background-origin: content-box;
+                background-size: 2100px auto;
+
+                &.active {
+                    background: $color-yellow url("/images/menu/pasteiga_en_active.svg") no-repeat $accordion-menu-background-position;
+                    background-origin: content-box;
+                    background-size: 2100px auto;
+                }
             }
         }
     }

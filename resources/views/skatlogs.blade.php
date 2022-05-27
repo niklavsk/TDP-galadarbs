@@ -1,7 +1,11 @@
 @extends('section')
 
 @section('hero-image')
-    <img src="{{ url('/images/hero/skatlogs.jpg') }}" alt="">
+    @if(app()->getLocale() == 'lv')
+        <img src="{{ url('/images/hero/skatlogs.jpg') }}" alt="">
+    @else
+        <img src="{{ url('/images/hero/skatlogs_en.jpg') }}" alt="">
+    @endif
 @endsection
 
 @section('color')

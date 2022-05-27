@@ -95,11 +95,19 @@
         <h2>{{ __('content.title-marsruts') }}</h2>
 
         <div class="map-image-container">
-            <img src="{{ url('/images/content/home/route.svg') }}" alt="">
+            @if(app()->getLocale() == 'lv')
+                <img src="{{ url('/images/content/home/route.svg') }}" alt="">
+            @else
+                <img src="{{ url('/images/content/home/route_en.svg') }}" alt="">
+            @endif
         </div>
     </div>
 
-    <div class="accordion-menu">
+    <div class="accordion-menu
+    @if(app()->getLocale() == 'en')
+        en
+    @endif
+    ">
         <div class="menu-item item-durvis">
             <div class="item-contents">
                 <div class="col-left">

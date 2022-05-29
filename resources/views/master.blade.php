@@ -41,6 +41,10 @@
             <div class="container @yield('color')">
                 @yield('content')
             </div>
+
+            <div class="footer">
+                <p><sub>Niklāvs Kadiķis, nk19021</sub></p>
+            </div>
         </div>
     </body>
 </html>

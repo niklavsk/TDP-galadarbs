@@ -28,6 +28,7 @@ $color-white: #FFFFFF;
 $color-black: #000000;
 
 $hero-image-height: 910px;
+$hero-image-height-small: 580px;
 
 $accordion-menu-space: 65px;
 $accordion-menu-background-position: 10px 12px;
@@ -84,6 +85,11 @@ h1 {
     padding: 0;
     text-align: center;
 
+    @media screen and (max-width: $size-small-desktop) {
+        font-size: 80px;
+        line-height: 90px;
+    }
+
     @media screen and (max-width: $size-medium-tablet) {
         font-size: 70px;
         line-height: 80px;
@@ -92,6 +98,11 @@ h1 {
     @media screen and (max-width: $size-small-tablet) {
         font-size: 50px;
         line-height: 60px;
+    }
+
+    @media screen and (max-width: $size-medium-mobile) {
+        font-size: 40px;
+        line-height: 50px;
     }
 }
 
@@ -218,6 +229,7 @@ p {
     .language-links-container {
         position: absolute;
         right: 100px;
+        transition: right 0.2s;
         top: 24px;
 
         @media screen and (max-width: $size-medium-tablet) {
@@ -255,6 +267,20 @@ p {
     }
 }
 
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: $color-white;
+
+    p {
+        margin: auto;
+        width: max-content;
+    }
+}
+
 // Buttons
 .button-white {
     background-color: $color-white;
@@ -282,7 +308,12 @@ p {
         height: $hero-image-height;
         overflow: hidden;
         position: relative;
+        transition: height 0.2s;
         width: 100%;
+
+        @media screen and (max-width: $size-medium-tablet) {
+            height: $hero-image-height-small;
+        }
 
         &:after {
             background: linear-gradient(to bottom, rgba(29,32,48,0) 30%, rgba(29,32,48,1) 95%);
@@ -292,7 +323,12 @@ p {
             left: 0;
             position: absolute;
             top: 0;
+            transition: height 0.2s;
             width: 100%;
+
+            @media screen and (max-width: $size-medium-tablet) {
+                height: $hero-image-height-small;
+            }
         }
 
         .hero-image-title {
@@ -318,6 +354,11 @@ p {
         margin: auto;
         overflow: hidden;
         position: relative;
+        transition: height 0.2s;
+
+        @media screen and (max-width: $size-medium-tablet) {
+            height: $hero-image-height-small;
+        }
 
         &:after {
             content: "";
@@ -331,11 +372,21 @@ p {
             object-fit: cover;
             position: absolute;
             top: 0;
+            transition: height 0.2s;
             width: 100%;
+
+            @media screen and (max-width: $size-medium-tablet) {
+                height: $hero-image-height-small;
+            }
         }
 
         h1 {
             margin-bottom: 60px;
+            transition: margin-bottom 0.2s;
+
+            @media screen and (max-width: $size-medium-mobile) {
+                margin-bottom: 30px;
+            }
         }
     }
 }
@@ -345,7 +396,8 @@ p {
     margin-bottom: 80px;
 
     h2 {
-        margin-bottom: 100px;
+        margin-bottom: 80px;
+        transition: margin-bottom 0.2s;
 
         @media screen and (max-width: $size-small-tablet) {
             margin-bottom: 60px;
@@ -354,6 +406,7 @@ p {
 
     .map-image-container {
         margin: auto;
+        transition: width 0.2s;
         width: 60%;
 
         @media screen and (max-width: $size-medium-tablet) {
@@ -651,6 +704,7 @@ p {
 // Section page
 .image-carousel-container {
     margin: 80px 6% 0 6%;
+    transition: margin 0.2s;
 
     @media screen and (max-width: $size-small-desktop) {
         margin: 80px 3% 0 3%;
@@ -671,6 +725,7 @@ p {
         margin-bottom: 60px;
         overflow: hidden;
         position: relative;
+        transition: height 0.2s, margin-bottom 0.2s, width 0.2s;
 
         @media screen and (max-width: $size-small-desktop) {
             height: $image-carousel-container-height-smaller;
@@ -705,6 +760,7 @@ p {
                 object-fit: cover;
                 position: absolute;
                 top: 10px;
+                transition: height 0.2s;
                 width: calc(100% - 20px);
 
                 @media screen and (max-width: $size-small-desktop) {
@@ -764,6 +820,7 @@ p {
             .dot-image-container {
                 aspect-ratio: 1 / 1;
                 position: relative;
+                transition: width 0.2s;
                 width: 120px;
 
                 @media screen and (max-width: $size-medium-desktop) {
@@ -790,6 +847,7 @@ p {
 
 .section-content {
     padding: 80px 11% 0 11%;
+    transition: padding 0.2s;
 
     @media screen and (max-width: $size-small-desktop) {
         padding: 80px 5% 0 5%;
@@ -799,8 +857,13 @@ p {
         padding: 40px 5% 0 5%;
     }
 
+    @media screen and (max-width: $size-medium-mobile) {
+        padding: 40px 0 0 0;
+    }
+
     .section-title {
         margin-bottom: 80px;
+        transition: margin-bottom 0.2s;
 
         @media screen and (max-width: $size-medium-tablet) {
             margin-bottom: 40px;
@@ -820,6 +883,7 @@ p {
 
         &.first-row {
             margin-bottom: 40px;
+            transition: margin-bottom 0.2s;
 
             @media screen and (max-width: $size-small-tablet) {
                 flex-direction: column-reverse;
@@ -829,6 +893,7 @@ p {
 
         .col-left,
         .col-right {
+            transition: width 0.2s;
             width: 50%;
 
             @media screen and (max-width: $size-small-tablet) {
@@ -843,6 +908,7 @@ p {
     display: flex;
     justify-content: space-between;
     padding: 80px 0;
+    transition: padding 0.2s;
 
     @media screen and (max-width: $size-medium-tablet) {
         padding: 40px 0;

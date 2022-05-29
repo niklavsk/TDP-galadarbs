@@ -32,6 +32,12 @@ h1 {
   padding: 0;
   text-align: center;
 }
+@media screen and (max-width: 1230px) {
+  h1 {
+    font-size: 80px;
+    line-height: 90px;
+  }
+}
 @media screen and (max-width: 900px) {
   h1 {
     font-size: 70px;
@@ -42,6 +48,12 @@ h1 {
   h1 {
     font-size: 50px;
     line-height: 60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 40px;
+    line-height: 50px;
   }
 }
 
@@ -175,6 +187,7 @@ p {
 .topnav .language-links-container {
   position: absolute;
   right: 100px;
+  transition: right 0.2s;
   top: 24px;
 }
 @media screen and (max-width: 900px) {
@@ -207,6 +220,21 @@ p {
   color: white;
 }
 
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #222;
+  color: #FFFFFF;
+}
+.footer p {
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .button-white {
   background-color: #FFFFFF;
   border: none;
@@ -233,7 +261,13 @@ p {
   height: 910px;
   overflow: hidden;
   position: relative;
+  transition: height 0.2s;
   width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .hero-image-container .hero-image-overlay {
+    height: 580px;
+  }
 }
 .hero-image-container .hero-image-overlay:after {
   background: linear-gradient(to bottom, rgba(29, 32, 48, 0) 30%, rgb(29, 32, 48) 95%);
@@ -243,7 +277,13 @@ p {
   left: 0;
   position: absolute;
   top: 0;
+  transition: height 0.2s;
   width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .hero-image-container .hero-image-overlay:after {
+    height: 580px;
+  }
 }
 .hero-image-container .hero-image-overlay .hero-image-title {
   position: absolute;
@@ -266,6 +306,12 @@ p {
   margin: auto;
   overflow: hidden;
   position: relative;
+  transition: height 0.2s;
+}
+@media screen and (max-width: 900px) {
+  .hero-image-container.home {
+    height: 580px;
+  }
 }
 .hero-image-container.home:after {
   content: "";
@@ -279,17 +325,30 @@ p {
      object-fit: cover;
   position: absolute;
   top: 0;
+  transition: height 0.2s;
   width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .hero-image-container.home img {
+    height: 580px;
+  }
 }
 .hero-image-container.home h1 {
   margin-bottom: 60px;
+  transition: margin-bottom 0.2s;
+}
+@media screen and (max-width: 500px) {
+  .hero-image-container.home h1 {
+    margin-bottom: 30px;
+  }
 }
 
 .home-route-map {
   margin-bottom: 80px;
 }
 .home-route-map h2 {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+  transition: margin-bottom 0.2s;
 }
 @media screen and (max-width: 630px) {
   .home-route-map h2 {
@@ -298,6 +357,7 @@ p {
 }
 .home-route-map .map-image-container {
   margin: auto;
+  transition: width 0.2s;
   width: 60%;
 }
 @media screen and (max-width: 900px) {
@@ -570,6 +630,7 @@ p {
 
 .image-carousel-container {
   margin: 80px 6% 0 6%;
+  transition: margin 0.2s;
 }
 @media screen and (max-width: 1230px) {
   .image-carousel-container {
@@ -593,6 +654,7 @@ p {
   margin-bottom: 60px;
   overflow: hidden;
   position: relative;
+  transition: height 0.2s, margin-bottom 0.2s, width 0.2s;
 }
 @media screen and (max-width: 1230px) {
   .image-carousel-container .image-container {
@@ -629,6 +691,7 @@ p {
      object-fit: cover;
   position: absolute;
   top: 10px;
+  transition: height 0.2s;
   width: calc(100% - 20px);
 }
 @media screen and (max-width: 1230px) {
@@ -689,6 +752,7 @@ p {
 .image-carousel-container .image-carousel-dots .dot .dot-image-container {
   aspect-ratio: 1/1;
   position: relative;
+  transition: width 0.2s;
   width: 120px;
 }
 @media screen and (max-width: 1300px) {
@@ -712,6 +776,7 @@ p {
 
 .section-content {
   padding: 80px 11% 0 11%;
+  transition: padding 0.2s;
 }
 @media screen and (max-width: 1230px) {
   .section-content {
@@ -723,8 +788,14 @@ p {
     padding: 40px 5% 0 5%;
   }
 }
+@media screen and (max-width: 500px) {
+  .section-content {
+    padding: 40px 0 0 0;
+  }
+}
 .section-content .section-title {
   margin-bottom: 80px;
+  transition: margin-bottom 0.2s;
 }
 @media screen and (max-width: 900px) {
   .section-content .section-title {
@@ -745,6 +816,7 @@ p {
 }
 .section-content .row.first-row {
   margin-bottom: 40px;
+  transition: margin-bottom 0.2s;
 }
 @media screen and (max-width: 630px) {
   .section-content .row.first-row {
@@ -754,6 +826,7 @@ p {
 }
 .section-content .row .col-left,
 .section-content .row .col-right {
+  transition: width 0.2s;
   width: 50%;
 }
 @media screen and (max-width: 630px) {
@@ -768,6 +841,7 @@ p {
   display: flex;
   justify-content: space-between;
   padding: 80px 0;
+  transition: padding 0.2s;
 }
 @media screen and (max-width: 900px) {
   .navigation-button-container {

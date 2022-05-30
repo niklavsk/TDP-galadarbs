@@ -59,7 +59,7 @@
 @section('about-section')
     {{ __('content.text-description-galastacija-1') }}
     <br><br>
-    {{ __('content.text-description-galastacija-1') }}
+    {{ __('content.text-description-galastacija-2') }}
 @endsection
 
 @section('button-previous')
